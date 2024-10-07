@@ -25,67 +25,72 @@
                 </div>
 
                 <div class="col-md-8">
-                    <div class="row justify-content-center text-center">
-                    <div class="d-flex flex-column align-items-center">
-                        <div class="d-flex justify-content-around my-3">
-                            <div class="col-3">
+                    <div class="row g-2">
+                    <div class="row g-2">
+                            <div class="col">
                                 <div class="skill-box">
                                     <img src="img/adobe.png" alt="Adobe">
                                     <p class="skill-text">Suite Adobe</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col">
                                 <div class="skill-box">
-                                    <img src="img/adobe.png" alt="Adobe">
+                                    <img src="img/code.png" alt="code">
                                     <p class="skill-text">HTML/CSS, JS, PHP</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col">
                                 <div class="skill-box">
-                                    <img src="img/adobe.png" alt="Adobe">
+                                    <img src="img/wordpress.webp" alt="Wordpress">
                                     <p class="skill-text">WordPress</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="d-flex flex-nowrap">
-                            <div class="col">
+
+                        <div class="row g-2">
+                            <div class="col-3">
                                 <div class="skill-box2">
-                                    <img src="img/adobe.png" alt="Adobe">
+                                    <img src="img/figma.webp" alt="Figma">
                                     <p class="skill-text">Figma</p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col">
                                 <div class="center-box">
-                                    <p class="center-text">Mes compétences <br> Mes passions</p>
+                                    <p class="skill-text">Mes competences <br> Mes passions</p>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-3">
                                 <div class="skill-box2">
                                     <img src="img/adobe.png" alt="Adobe">
-                                    <p class="skill-text">Photographie</p>
+                                    <p class="skill-text">BOX L2 C3</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="d-flex flex-column align-items-center">
-                        <div class="d-flex justify-content-around my-3">
-                            <div class="col-3">
+                        <div class="row g-2">
+                            <div class="col">
                                 <div class="skill-box3">
                                     <img src="img/adobe.png" alt="Adobe">
-                                    <p class="skill-text">Suite Adobe</p>
+                                    <p class="skill-text">BOX L3 C1</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col">
                                 <div class="skill-box3">
                                     <img src="img/adobe.png" alt="Adobe">
-                                    <p class="skill-text">HTML/CSS, JS, PHP</p>
+                                    <p class="skill-text">BOX L3 C2</p>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col">
                                 <div class="skill-box3">
                                     <img src="img/adobe.png" alt="Adobe">
-                                    <p class="skill-text">WordPress</p>
+                                    <p class="skill-text">BOX L3 C3</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="skill-box3">
+                                    <img src="img/adobe.png" alt="Adobe">
+                                    <p class="skill-text">BOX L3 C4</p>
                                 </div>
                             </div>
                         </div>
