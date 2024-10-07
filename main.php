@@ -8,8 +8,11 @@
         <img src="img/Chevron_bas btn.png" alt="Chevron Bas">
     </button>
 </div>
+
+
+<!-- Section Qui je suis avec PHOTO + BENTO -->
 <section class="container-fluid qui-je-suis">
-    <h2 class="text-center" id="qjs">Qui je suis</h2>
+    <h2 class="text-center ss-titre" id="ss-titre">Qui je suis</h2>
         <div class="container">
             <div class="row align-items-center">
                 <!-- Colonne de gauche avec l'image et le texte -->
@@ -23,7 +26,8 @@
                         Dolor sit amet consectetur adipiscing.
                     </p>
                 </div>
-
+                <!-- Fin colonne Photo
+                 Début BENTO -->
                 <div class="col-md-8">
                     <div class="row g-2">
                     <div class="row g-2">
@@ -46,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- FIN Première ligne bento -->
 
                         <div class="row g-2">
                             <div class="col-3">
@@ -67,6 +71,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- FIN Deuxième ligne bento -->
 
                         <div class="row g-2">
                             <div class="col">
@@ -94,9 +99,61 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- FIN Troisième ligne bento -->
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- FIN SECTION PHOTO BENTO
+     
+    Début "Mes travaux"-->
+    <section>
+        <div>
+            <h2 class="text-center" id="ss-titre">Découvrir mes travaux</h2>
+        </div>
+
+        <div class="container text-center mt-5">
+    <div class="row">
+      <!-- Logo et Identité Visuelle -->
+      <div class="col-md-6">
+        <div class="portfolio-item">
+          <img src="image1.jpg" alt="Logos et Identité visuelle" class="img-fluid rounded-circle">
+          <h3>Logos et Identité visuelle</h3>
+        </div>
+      </div>
+
+      <!-- Sites web et Maquettes -->
+      <div class="col-md-6">
+        <div class="portfolio-item">
+          <img src="image2.jpg" alt="Sites web et Maquettes" class="img-fluid rounded-circle">
+          <h3>Sites web et Maquettes</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <!-- Photographies -->
+      <div class="col-md-6">
+        <div class="portfolio-item">
+          <img src="image3.jpg" alt="Photographies" class="img-fluid rounded-circle">
+          <h3>Photographies</h3>
+        </div>
+      </div>
+
+      <!-- Vidéos -->
+      <div class="col-md-6">
+        <div class="portfolio-item">
+          <img src="image4.jpg" alt="Vidéos" class="img-fluid rounded-circle">
+          <h3>Vidéos</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </section>
+
+
+
+    </body>

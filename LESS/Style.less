@@ -1,0 +1,187 @@
+// Variables
+@background-color-black: #000000;
+@background-color-white: #ffffff;
+@text-color-blue: #9EE0FF;
+@text-color-white: #ffffff;
+@text-color-black: #000000;
+@font-family-default: Arial, sans-serif;
+@title-color: #333333;
+@header-color: #000000;
+@link-color: #b9d5f3;
+
+// Mixins
+.scroll-behavior-smooth() {
+    scroll-behavior: smooth;
+}
+
+.flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-rounded-circle() {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    clip-path: ellipse(50% 35% at 50% 50%);
+}
+
+// Global Styles
+html {
+    .scroll-behavior-smooth();
+}
+
+body {
+    background-color: @background-color-black;
+    color: @text-color-white;
+    font-family: @font-family-default;
+}
+
+.header {
+    color: @header-color;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: @link-color;
+            }
+        }
+    }
+}
+
+
+// Hero Section
+.hero-section {
+    .flex-center();
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0;
+    background-image: url('../img/Hero section.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        margin: 20px 0;
+        font-size: 4.5rem !important;
+        font-weight: 700 !important;
+        color: @title-color !important;
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    img[alt="Mon Logo"] {
+        padding-bottom: 5%;
+    }
+
+    .chevron {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+// Qui Je Suis Section
+.qui-je-suis {
+    padding: 50px 0;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 300px;
+    .flex-center();
+    background-color: @title-color;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.description {
+    color: @text-color-white;
+    margin-top: 20px;
+    font-family: serif;
+}
+
+.title {
+    color: @highlight-color;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+// BENTO
+.skill-box,
+.skill-box2,
+.skill-box3,
+.center-box {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: @background-color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    color: @text-color-black;
+
+    img {
+        width: 75px;
+        height: 75px;
+    }
+}
+.center-box{
+    color: @text-color-blue;
+}
+
+.skill-box {
+    border-radius: 0 0 20px 20px;
+}
+
+.skill-box3 {
+    border-radius: 20px 20px 0 0;
+}
+
+// Portfolio Section
+.portfolio-item {
+    text-align: center;
+    padding: 15px;
+
+    img {
+        .image-rounded-circle();
+    }
+
+    h3 {
+        margin-top: 15px;
+        color: @text-color-blue;
+        font-size: 1.5rem;
+    }
+}
