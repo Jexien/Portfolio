@@ -13,7 +13,7 @@
 
     <!-- Section Qui je suis avec PHOTO + BENTO -->
     <section class="container-fluid qui-je-suis">
-        <h2 class="text-center cinzel" id="ss-titre">Qui je suis</h2>
+        <h2 class="text-center cinzel h2" id="ss-titre">Qui je suis</h2>
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Colonne de gauche avec l'image et le texte -->
@@ -113,7 +113,7 @@
         <section>
             <div class="deco">
                 <a href="#travaux">
-                    <h2 class="text-center cinzel" id="travaux">Découvrir mes travaux</h2>
+                    <h2 class="text-center cinzel h2small" id="travaux">Découvrir mes travaux</h2>
                 </a>
             </div>
 
@@ -122,7 +122,7 @@
                     <!-- Logo et Identité Visuelle -->
                     <div class="col-md-6">
                         <div class="portfolio-item">
-                            <h3 class="portfolio-title">Logos et Identité visuelle</h3>
+                            <h3 class="portfolio-title" id="Logo">Logos et Identité visuelle</h3>
                             <img src="img/id_logo.png" alt="Logos et Identité visuelle">
                         </div>
                     </div>
@@ -140,8 +140,10 @@
                     <!-- Photographies -->
                     <div class="col-md-6">
                         <div class="portfolio-item">
-                            <h3 class="portfolio-title">Photographies</h3>
-                            <img src="img/photo.png" alt="Photographies">
+                            <a href="photo.php">
+                                <h3 class="portfolio-title">Photographies</h3>
+                                <img src="img/photo.png" alt="Photographies">
+                            </a>
                         </div>
                     </div>
 

@@ -25,9 +25,9 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="main.php">Accueil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
                     <li><a href="contact.php">Me contacter</a></li>
-                    <li><a href="projects.php">Mes travaux</a></li>
+                    <li><a href="index.php#Logo">Mes travaux</a></li>
                 </ul>
             </nav>
         </div>

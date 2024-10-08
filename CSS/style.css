@@ -7,7 +7,7 @@ body {
   font-family: 'Monomaniac One', sans-serif;
 }
 .titre {
-  font-size: 6.5rem !important;
+  font-size: 4.688rem !important;
   font-weight: 700;
   color: #000000;
   margin: 0;
@@ -18,18 +18,42 @@ body {
   padding-top: 3%;
   padding-bottom: 3%;
 }
-.deco a {
+a {
   text-decoration: none;
   color: #9EE0FF;
+}
+.deco a {
   cursor: pointer;
 }
-h2 {
+.h2 {
   font-size: 3rem !important;
 }
+.h2small {
+  font-size: 2.25rem !important;
+}
+html {
+  font-size: 16px;
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
 header {
-  color: #000000;
+  position: absolute;
+  /* ou fixed selon ce que tu veux obtenir */
   top: 0;
   width: 100%;
+  z-index: 10;
+  /* Assure que le header est devant l'image */
+  background-color: transparent;
+  /* ou avec opacité si besoin */
+  color: #000000;
   font-size: 1rem;
 }
 header ul {
@@ -125,13 +149,13 @@ header ul li a {
   margin-bottom: 40px;
 }
 .skill-text {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 auto;
   text-align: center;
   color: #000000;
 }
 .skill-text2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 auto;
   text-align: center;
   color: #9EE0FF;
@@ -141,7 +165,7 @@ header ul li a {
 .skill-box2,
 .skill-box3 {
   font-family: 'Montagu Slab', serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .skill-box {
   width: 100%;
@@ -231,7 +255,7 @@ header ul li a {
 }
 .form-container .notice {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .formulaire {
   width: 100%;
@@ -299,6 +323,13 @@ label > span:last-child {
 }
 .form_button:hover {
   background-color: #1D79D8;
+}
+.h1photo {
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .horizontal-bar {
   width: 100%;

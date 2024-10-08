@@ -15,9 +15,10 @@
 
 // Sizes
 @size-icon: 30px;
-@size-h1: 6.5rem;
-@size-h2: 3rem;
-@size-box: 1.5rem;
+@size-h1: 4.688rem; // 75px
+@size-h2: 3rem; // 48px
+@size-h3: 2.25rem; // 36px
+@size-h4: 1.25rem; // 20px
 @size-image-placeholder: 300px;
 @size-bar-height: 2px;
 @size-bar-width: 100%;
@@ -117,27 +118,52 @@ body {
   padding-top: 3%;
   padding-bottom: 3%;
 }
+
+a{
+  text-decoration: none;
+  color: @color-blue;
+}
 .deco{
   a{
-    text-decoration: none;
-    color: @color-blue;
   cursor: pointer;
 }
 }
-h2{
+.h2{
   font-size: @size-h2 !important;
 }
+
+.h2small{
+  font-size: @size-h3 !important;
+}
+
+html {
+  font-size: 16px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+}
+
 // FIN Base styles ____________________________________________________________________________________________________________________________________________
 
 
 
 
 // Header
+// Header
 header {
-  color: @color-black;
+  position: absolute; /* ou fixed selon ce que tu veux obtenir */
   top: 0;
   width: 100%;
+  z-index: 10; /* Assure que le header est devant l'image */
+  background-color: transparent; /* ou avec opacité si besoin */
+  color: @color-black;
   font-size: 1rem;
+
   ul {
     display: flex;
     justify-content: space-evenly;
@@ -156,9 +182,9 @@ header {
   }
 }
 
+
 // FIN Header ____________________________________________________________________________________________________________________________________________
 
-// Hero section
 .hero-section {
   .flex-column();
   .flex-center();
@@ -188,6 +214,9 @@ header {
     transform: translateX(-50%);
   }
 }
+
+
+
 
 // FIN Hero section ____________________________________________________________________________________________________________________________________________
 
@@ -221,13 +250,13 @@ header {
 
 // Bentot section
 .skill-text {
-  font-size: @size-box;
+  font-size: @size-h4;
   margin: 0 auto;
   text-align: center;
   color: @color-black;
 }
 .skill-text2 {
-  font-size: @size-box;
+  font-size: @size-h4;
   margin: 0 auto;
   text-align: center;
   color: @color-blue;
@@ -237,7 +266,7 @@ header {
 .skill-box2,
 .skill-box3 {
   font-family: @font-box;
-  font-size: @size-box;
+  font-size: @size-h4;
 }
 .skill-box {
   width: 100%;
@@ -303,7 +332,7 @@ header {
   }
   .notice {
     color: @color-white;
-    font-size: @size-box;
+    font-size: @size-h4;
   }
 }
 
@@ -371,6 +400,14 @@ label > span:last-child {
 
 
 // FIN PAGE CONTACT ____________________________________________________________________________________________________________________________________________
+
+.h1photo{
+  color: @color-white;
+  font-size: @size-h4;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
 // Footer styles
 .horizontal-bar {

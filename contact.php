@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="d-flex justify-content-center">
         <button class="form_button col-3" type="submit">Envoyer le formulaire</button>
     </div>
+    
 </div>
 
     <?php include 'footer.php'; ?>

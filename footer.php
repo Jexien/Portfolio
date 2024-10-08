@@ -3,7 +3,7 @@
   <div class="footer-container">
     <div class="footer-column">
       <ul>
-        <li><a href="#">Accueil</a></li>
+        <li><a href="index.php">Accueil</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
