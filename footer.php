@@ -20,8 +20,8 @@
       </ul>
     </div>
     <div class="footer-social row">
-      <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
-      <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/fabien-maillard-graphiste" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/fabien.mlrd/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
     </div>
   </div>
 <div class="footer-copyright">
