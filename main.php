@@ -1,9 +1,8 @@
+<?php include 'header.php'; ?>
+
     <div class="hero-section">
-        <div class="header">
-            <?php include 'header.php'; ?>
-        </div>
         <img src="img/Logo FM.png" alt="Mon Logo">
-        <h1 class="cinzel">Bienvenue</h1>
+        <h1 class="titre cinzel">Bienvenue</h1>
         <button class="chevron">
             <a href="#ss-titre">
                 <img src="img/Chevron_bas btn.png" alt="Chevron Bas" onmouseover="this.src='img/Chevron_bas btn_dark.png'" onmouseout="this.src='img/Chevron_bas btn.png'">

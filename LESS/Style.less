@@ -5,6 +5,7 @@
 @color-dark-grey: #333333;
 @color-blue: #9EE0FF;
 @color-dark-blue: #1D79D8;
+@color-placeholder: #999999;
 
 // Fonts
 @font-default: 'Monomaniac One', sans-serif;
@@ -21,6 +22,7 @@
 @size-bar-height: 2px;
 @size-bar-width: 100%;
 @size-footer: 1.2rem;
+@size-button: 0.9rem;
 
 // Padding and Margin
 @padding-default: 20px;
@@ -32,6 +34,7 @@
 // Border Radius
 @border-radius-small: 20px;
 @border-radius-large: 20px 20px 0 0;
+@border-radius-button: 20px 0px 20px 5px;
 
 // Opacity
 @hover-opacity: 0.8;
@@ -40,6 +43,9 @@
 @position-chevron: absolute;
 @position-chevron-bottom: 20px;
 @position-chevron-left: 50%;
+
+
+// Fin Variables ____________________________________________________________________________________________________________________________________________
 
 // Mixins
 .flex-center() {
@@ -94,27 +100,23 @@
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background-color: @color-black;
   color: @color-blue;
   font-family: @font-default;
 }
-
-h1 {
+.titre {
   font-size: @size-h1 !important;
   font-weight: 700;
   color: @color-black;
   margin: 0;
   padding: 0;
 }
-
 .cinzel {
   font-family: @font-title !important;
   padding-top: 3%;
   padding-bottom: 3%;
 }
-
 .deco{
   a{
     text-decoration: none;
@@ -122,19 +124,20 @@ h1 {
   cursor: pointer;
 }
 }
-
 h2{
   font-size: @size-h2 !important;
 }
+// FIN Base styles ____________________________________________________________________________________________________________________________________________
+
+
+
 
 // Header
-.header {
+header {
   color: @color-black;
   top: 0;
-  position: absolute;
   width: 100%;
-  font-size: 1.7rem;
-
+  font-size: 1rem;
   ul {
     display: flex;
     justify-content: space-evenly;
@@ -153,6 +156,8 @@ h2{
   }
 }
 
+// FIN Header ____________________________________________________________________________________________________________________________________________
+
 // Hero section
 .hero-section {
   .flex-column();
@@ -165,20 +170,17 @@ h2{
   background-position: center;
   position: relative;
   text-align: center;
-
   img {
     max-width: 100%;
     height: auto;
     padding-bottom: @padding-hero-image-bottom;
   }
-
   button {
     background: none;
     border: none;
     cursor: pointer;
     margin: @margin-button 0;
   }
-
   .chevron {
     position: @position-chevron;
     bottom: @position-chevron-bottom;
@@ -187,36 +189,37 @@ h2{
   }
 }
 
+// FIN Hero section ____________________________________________________________________________________________________________________________________________
+
 // Qui je suis section
 .qui-je-suis {
   padding: @padding-section;
 }
-
 .image-placeholder {
   width: @size-image-placeholder;
   height: @size-image-placeholder;
   background-color: @color-dark-grey;
   .flex-center();
-
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
   }
 }
-
 .description {
   color: @color-white;
   margin-top: 20px;
     font-family: @font-box;
 }
-
 .title {
   color: @color-blue;
   font-size: @size-h2;
   margin-bottom: 40px;
 }
 
+// FIN Qui je suis section ____________________________________________________________________________________________________________________________________________
+
+// Bentot section
 .skill-text {
   font-size: @size-box;
   margin: 0 auto;
@@ -230,10 +233,6 @@ h2{
   color: @color-blue;
   padding-top: 10%;
 }
-
-
-
-// Skill boxes
 .skill-box,
 .skill-box2,
 .skill-box3 {
@@ -249,13 +248,11 @@ h2{
   .flex-column();
   .flex-center();
   text-align: center;
-
   img {
     width: 75px;
     height: 75px;
   }
 }
-
 .skill-box2 {
   width: 100%;
   height: 100%;
@@ -271,7 +268,6 @@ h2{
     width: auto;
   }
 }
-
 .skill-box3 {
   width: 100%;
   height: 100%;
@@ -281,12 +277,13 @@ h2{
   .flex-column();
   .flex-center();
   text-align: center;
-
   img {
     width: 75px;
     height: 75px;
   }
 }
+
+// FIN Bentot section ____________________________________________________________________________________________________________________________________________
 
 .portfolio-item {
   padding-bottom: 20%;
@@ -296,6 +293,84 @@ h2{
   }
 }
 
+
+// PAGE CONTACT
+
+.form-container{
+  h1{
+    color: @color-white;
+    font-size: @size-h2;
+  }
+  .notice {
+    color: @color-white;
+    font-size: @size-box;
+  }
+}
+
+// Styles pour le formulaire
+.formulaire {
+  width: 100%;
+  max-width: 50%; 
+  margin: auto;
+}
+
+// Styles pour chaque champ
+.champ {
+  display: flex; 
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+// Styles pour les labels
+label {
+  width: 30%;
+  font-size: 20px;
+  color: @color-white;
+  margin-right: 10px;
+}
+
+// Styles pour les inputs
+input {
+  width: 70%;
+  height: 49px;
+  padding: 10px;
+  background-color: @color-white;
+  font-size: 18px;
+  transition: border-color 0.3s;
+
+  &::placeholder {
+    color: @color-placeholder;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: @color-blue;
+  }
+}
+
+label > span:last-child {
+  color: red;
+}
+
+.form_button{
+  width: 10%;
+  border-radius: @border-radius-button;
+  background-color: @color-blue;
+  color: @color-black;
+  font-size: @size-button;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: @color-dark-blue;
+  }
+}
+
+
+// FIN PAGE CONTACT ____________________________________________________________________________________________________________________________________________
 
 // Footer styles
 .horizontal-bar {
@@ -347,3 +422,4 @@ footer {
   }
 }
 
+// FIN Footer styles ____________________________________________________________________________________________________________________________________________

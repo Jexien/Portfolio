@@ -6,7 +6,7 @@ body {
   color: #9EE0FF;
   font-family: 'Monomaniac One', sans-serif;
 }
-h1 {
+.titre {
   font-size: 6.5rem !important;
   font-weight: 700;
   color: #000000;
@@ -26,14 +26,13 @@ h1 {
 h2 {
   font-size: 3rem !important;
 }
-.header {
+header {
   color: #000000;
   top: 0;
-  position: absolute;
   width: 100%;
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
-.header ul {
+header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,10 +43,10 @@ h2 {
   padding: 0;
   margin: 0;
 }
-.header ul li {
+header ul li {
   margin: 0 15px;
 }
-.header ul li a {
+header ul li a {
   color: #9EE0FF;
   text-decoration: none;
 }
@@ -225,6 +224,81 @@ h2 {
 .portfolio-item .portfolio-title {
   margin-bottom: 40px;
   text-align: center;
+}
+.form-container h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}
+.form-container .notice {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.formulaire {
+  width: 100%;
+  max-width: 50%;
+  margin: auto;
+}
+.champ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+label {
+  width: 30%;
+  font-size: 20px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+input {
+  width: 70%;
+  height: 49px;
+  padding: 10px;
+  background-color: #ffffff;
+  font-size: 18px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder {
+  color: #999999;
+}
+input::-ms-input-placeholder {
+  color: #999999;
+}
+input::placeholder {
+  color: #999999;
+}
+input:focus {
+  outline: none;
+  border-color: #9EE0FF;
+}
+label > span:last-child {
+  color: red;
+}
+.form_button {
+  width: 10%;
+  border-radius: 20px 0px 20px 5px;
+  background-color: #9EE0FF;
+  color: #000000;
+  font-size: 0.9rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.form_button:hover {
+  background-color: #1D79D8;
 }
 .horizontal-bar {
   width: 100%;
