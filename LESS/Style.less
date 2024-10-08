@@ -1,30 +1,45 @@
-// Variables
-@background-color-black: #000000;
-@background-color-white: #ffffff;
-@background-color-light-grey: #f0f0f0;
-@background-color-dark-grey: #333333;
-@text-color-blue: #9EE0FF;
-@text-color-light-blue: #9EE0FF;
-@text-color-title-blue: #9EE0FF;
-@text-color-black: #000000;
-@text-color-white: #ffffff;
-@font-family-default: Arial, sans-serif;
-@font-family-serif: serif;
-@hover-opacity: 0.8;
+// Colors
+@color-black: #000000;
+@color-white: #ffffff;
+@color-light-grey: #f0f0f0;
+@color-dark-grey: #333333;
+@color-blue: #9EE0FF;
+@color-bar: #333;
+@color-bar-shadow: #000;
+
+// Fonts
+@font-default: 'Monomaniac One', sans-serif;
+@font-serif: 'Monomaniac One', serif;
+@font-title: 'Cinzel', serif;
+@font-box: 'Montagu Slab', serif;
+
+// Sizes
+@size-icon: 30px;
+@size-h1: 6.5rem;
+@size-h2: 4rem;
+@size-box: 1.5rem;
+@size-image-placeholder: 300px;
+@size-bar-height: 2px;
+@size-bar-width: 100%;
+
+// Padding and Margin
 @padding-default: 20px;
 @padding-section: 50px 0;
-@icon-size: 30px;
+@padding-hero-image-bottom: 5%;
+@margin-button: 20px 0;
+@margin-footer-top: 200px;
+
+// Border Radius
 @border-radius-small: 20px;
 @border-radius-large: 20px 20px 0 0;
-@heading-font-size: 4.5rem;
-@title-font-size: 2.5rem;
-@skill-font-size: 2.2rem;
-@hero-image-padding-bottom: 5%;
-@button-margin: 20px 0;
-@chevron-position: absolute;
-@chevron-bottom: 20px;
-@chevron-left: 50%;
-@image-placeholder-size: 300px;
+
+// Opacity
+@hover-opacity: 0.8;
+
+// Position
+@position-chevron: absolute;
+@position-chevron-bottom: 20px;
+@position-chevron-left: 50%;
 
 // Mixins
 .flex-center() {
@@ -56,7 +71,7 @@
     }
 
     a {
-      color: @text-color-blue;
+      color: @color-blue;
       text-decoration: none;
 
       &:hover {
@@ -67,8 +82,8 @@
 }
 
 .icon-hover() {
-  width: @icon-size;
-  height: @icon-size;
+  width: @size-icon;
+  height: @size-icon;
 
   &:hover {
     opacity: @hover-opacity;
@@ -81,25 +96,37 @@ html {
 }
 
 body {
-  background-color: @background-color-black;
-  color: @text-color-blue;
-  font-family: @font-family-default;
+  background-color: @color-black;
+  color: @color-blue;
+  font-family: @font-default;
 }
 
 h1 {
-  font-size: @heading-font-size !important;
-  font-weight: 700 !important;
-  color: @text-color-black !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  font-size: @size-h1 !important;
+  font-weight: 700;
+  color: @color-black;
+  margin: 0;
+  padding: 0;
+}
+
+.cinzel {
+  font-family: @font-title !important;
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  h2{
+    font-size: @size-h2 !important;
+  }
+  
 }
 
 // Header
 .header {
-  color: @text-color-black;
+  color: @color-black;
   top: 0;
   position: absolute;
   width: 100%;
+  font-size: 1.7rem;
 
   ul {
     display: flex;
@@ -112,7 +139,7 @@ h1 {
       margin: 0 15px;
 
       a {
-        color: @text-color-light-blue;
+        color: @color-blue;
         text-decoration: none;
       }
     }
@@ -125,7 +152,7 @@ h1 {
   .flex-center();
   height: 100vh;
   width: 100%;
-  background-color: @background-color-light-grey;
+  background-color: @color-light-grey;
   background-image: url('../img/Hero section.png');
   background-size: cover;
   background-position: center;
@@ -135,20 +162,20 @@ h1 {
   img {
     max-width: 100%;
     height: auto;
-    padding-bottom: @hero-image-padding-bottom;
+    padding-bottom: @padding-hero-image-bottom;
   }
 
   button {
     background: none;
     border: none;
     cursor: pointer;
-    margin: @button-margin 0;
+    margin: @margin-button 0;
   }
 
   .chevron {
-    position: @chevron-position;
-    bottom: @chevron-bottom;
-    left: @chevron-left;
+    position: @position-chevron;
+    bottom: @position-chevron-bottom;
+    left: @position-chevron-left;
     transform: translateX(-50%);
   }
 }
@@ -159,9 +186,9 @@ h1 {
 }
 
 .image-placeholder {
-  width: @image-placeholder-size;
-  height: @image-placeholder-size;
-  background-color: @background-color-dark-grey;
+  width: @size-image-placeholder;
+  height: @size-image-placeholder;
+  background-color: @color-dark-grey;
   .flex-center();
 
   img {
@@ -172,38 +199,43 @@ h1 {
 }
 
 .description {
-  color: @text-color-white;
+  color: @color-white;
   margin-top: 20px;
-  font-family: @font-family-serif;
+  font-family: @font-serif;
 }
 
 .title {
-  color: @text-color-title-blue;
-  font-size: @title-font-size;
+  color: @color-blue;
+  font-size: @size-h2;
   margin-bottom: 40px;
 }
 
 .skill-text {
-  font-size: @skill-font-size;
+  font-size: @size-box;
   margin: 0 auto;
   text-align: center;
-  color: @text-color-black;
+  color: @color-black;
 }
 .skill-text2 {
-  font-size: @skill-font-size;
+  font-size: @size-box;
   margin: 0 auto;
   text-align: center;
-  color: @text-color-blue;
+  color: @color-blue;
   padding-top: 10%;
-
 }
 
 // Skill boxes
+.skill-box,
+.skill-box2,
+.skill-box3 {
+  font-family: @font-box;
+  font-size: @size-box;
+}
 .skill-box {
   width: 100%;
   height: 100%;
   padding: 10px;
-  background-color: @background-color-white;
+  background-color: @color-white;
   border-radius: 0 0 @border-radius-small @border-radius-small;
   .flex-column();
   .flex-center();
@@ -219,7 +251,7 @@ h1 {
   width: 100%;
   height: 100%;
   padding: 10px;
-  background-color: @background-color-white;
+  background-color: @color-white;
   border-radius: @border-radius-small;
   .flex-column();
   .flex-center();
@@ -235,7 +267,7 @@ h1 {
   width: 100%;
   height: 100%;
   padding: 10px;
-  background-color: @background-color-white;
+  background-color: @color-white;
   border-radius: @border-radius-large;
   .flex-column();
   .flex-center();
@@ -247,14 +279,28 @@ h1 {
   }
 }
 
+.portfolio-item {
+  padding-bottom: 20%;
+  .portfolio-title {
+    margin-bottom: 40px; 
+    text-align: center; 
+  }
+}
+
 // Footer styles
+.horizontal-bar {
+  width: 100%;
+  height: @size-bar-height;
+  background-color: @color-bar;
+  box-shadow: 0 2px 5px @color-bar-shadow;
+}
 
 footer {
-  background-color: @background-color-black;
-  color: @text-color-blue;
-  font-family: @font-family-default;
+  background-color: @color-black;
+  color: @color-blue;
+  font-family: @font-default;
   padding: @padding-default;
-  margin-top: 200px;
+  margin-top: @margin-footer-top;
 
   .footer-container {
     .flex-between();
@@ -286,6 +332,6 @@ footer {
   .footer-copyright {
     text-align: center;
     margin-top: 20px;
-    color: @text-color-blue;
+    color: @color-blue;
   }
 }

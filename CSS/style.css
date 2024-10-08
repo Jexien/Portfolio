@@ -4,20 +4,29 @@ html {
 body {
   background-color: #000000;
   color: #9EE0FF;
-  font-family: Arial, sans-serif;
+  font-family: 'Monomaniac One', sans-serif;
 }
 h1 {
-  font-size: 4.5rem !important;
-  font-weight: 700 !important;
-  color: #000000 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  font-size: 6.5rem !important;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+.cinzel {
+  font-family: 'Cinzel', serif !important;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.cinzel h2 {
+  font-size: 4rem !important;
 }
 .header {
   color: #000000;
   top: 0;
   position: absolute;
   width: 100%;
+  font-size: 1.7rem;
 }
 .header ul {
   display: -webkit-box;
@@ -104,25 +113,31 @@ h1 {
 .description {
   color: #ffffff;
   margin-top: 20px;
-  font-family: serif;
+  font-family: 'Monomaniac One', serif;
 }
 .title {
   color: #9EE0FF;
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin-bottom: 40px;
 }
 .skill-text {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   margin: 0 auto;
   text-align: center;
   color: #000000;
 }
 .skill-text2 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   margin: 0 auto;
   text-align: center;
   color: #9EE0FF;
   padding-top: 10%;
+}
+.skill-box,
+.skill-box2,
+.skill-box3 {
+  font-family: 'Montagu Slab', serif;
+  font-size: 1.5rem;
 }
 .skill-box {
   width: 100%;
@@ -199,10 +214,24 @@ h1 {
   width: 75px;
   height: 75px;
 }
+.portfolio-item {
+  padding-bottom: 20%;
+}
+.portfolio-item .portfolio-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.horizontal-bar {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  -webkit-box-shadow: 0 2px 5px #000;
+          box-shadow: 0 2px 5px #000;
+}
 footer {
   background-color: #000000;
   color: #9EE0FF;
-  font-family: Arial, sans-serif;
+  font-family: 'Monomaniac One', sans-serif;
   padding: 20px;
   margin-top: 200px;
 }

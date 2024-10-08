@@ -1,4 +1,5 @@
 <footer>
+<div class="horizontal-bar"></div>
   <div class="footer-container">
     <div class="footer-column">
       <ul>

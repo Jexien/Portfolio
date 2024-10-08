@@ -3,7 +3,7 @@
             <?php include 'header.php'; ?>
         </div>
         <img src="img/Logo FM.png" alt="Mon Logo">
-        <h1>Bienvenue</h1>
+        <h1 class="cinzel">Bienvenue</h1>
         <button class="chevron">
             <img src="img/Chevron_bas btn.png" alt="Chevron Bas">
         </button>
@@ -12,7 +12,7 @@
 
     <!-- Section Qui je suis avec PHOTO + BENTO -->
     <section class="container-fluid qui-je-suis">
-        <h2 class="text-center" id="ss-titre">Qui je suis</h2>
+        <h2 class="text-center cinzel" id="ss-titre">Qui je suis</h2>
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Colonne de gauche avec l'image et le texte -->
@@ -66,8 +66,8 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="skill-box2">
-                                        <img src="img/adobe.png" alt="Adobe">
-                                        <p class="skill-text">BOX L2 C3</p>
+                                        <img src="img/camera.png" alt="Appareil Photo">
+                                        <p class="skill-text">Photographie</p>
                                     </div>
                                 </div>
                             </div>
@@ -76,26 +76,26 @@
                             <div class="row g-2">
                                 <div class="col">
                                     <div class="skill-box3">
-                                        <img src="img/adobe.png" alt="Adobe">
-                                        <p class="skill-text">BOX L3 C1</p>
+                                        <img src="img/C1.webp" alt="Capture One">
+                                        <p class="skill-text">Capture One</p>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="skill-box3">
-                                        <img src="img/adobe.png" alt="Adobe">
-                                        <p class="skill-text">BOX L3 C2</p>
+                                        <img src="img/Blacksmith.png" alt="Icone Forge">
+                                        <p class="skill-text">Forge & Ebenisterie</p>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="skill-box3">
-                                        <img src="img/adobe.png" alt="Adobe">
-                                        <p class="skill-text">BOX L3 C3</p>
+                                        <img src="img/Italie.png" alt="Drapeau Italien">
+                                        <p class="skill-text">Italiano</p>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="skill-box3">
-                                        <img src="img/adobe.png" alt="Adobe">
-                                        <p class="skill-text">BOX L3 C4</p>
+                                        <img src="img/Great Britain.png" alt="Drapeau Britanique">
+                                        <p class="skill-text">English</p>
                                     </div>
                                 </div>
                             </div>
@@ -108,52 +108,50 @@
         </section>
         <!-- FIN SECTION PHOTO BENTO
         
-        Début "Mes travaux"-->
+        <!-- Début "Mes travaux" -->
         <section>
             <div>
-                <h2 class="text-center" id="ss-titre">Découvrir mes travaux</h2>
+                <h2 class="text-center cinzel" id="ss-titre">Découvrir mes travaux</h2>
             </div>
 
             <div class="container text-center mt-5">
-        <div class="row">
-        <!-- Logo et Identité Visuelle -->
-        <div class="col-md-6">
-            <div class="portfolio-item">
-                <h3>Logos et Identité visuelle</h3>
-                <img src="img/id_logo.png" alt="Logos et Identité visuelle">
+                <div class="row">
+                    <!-- Logo et Identité Visuelle -->
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <h3 class="portfolio-title">Logos et Identité visuelle</h3>
+                            <img src="img/id_logo.png" alt="Logos et Identité visuelle">
+                        </div>
+                    </div>
+
+                    <!-- Sites web et Maquettes -->
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <h3 class="portfolio-title">Sites web et Maquettes</h3>
+                            <img src="img/site.png" alt="Sites web et Maquettes">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <!-- Photographies -->
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <h3 class="portfolio-title">Photographies</h3>
+                            <img src="img/photo.png" alt="Photographies">
+                        </div>
+                    </div>
+
+                    <!-- Vidéos -->
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <h3 class="portfolio-title">Vidéos</h3>
+                            <img src="img/vidéo.png" alt="Vidéos">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Sites web et Maquettes -->
-        <div class="col-md-6">
-            <div class="portfolio-item">
-            <h3>Sites web et Maquettes</h3>
-            <img src="img/site.png" alt="Sites web et Maquettes">
-            </div>
-        </div>
-        </div>
-
-        <div class="row mt-4">
-        <!-- Photographies -->
-        <div class="col-md-6">
-            <div class="portfolio-item">
-            <h3>Photographies</h3>
-            <img src="img/photo.png" alt="Photographies">
-            </div>
-        </div>
-
-        <!-- Vidéos -->
-        <div class="col-md-6">
-            <div class="portfolio-item">
-                <h3>Vidéos</h3>
-                <img src="img/vidéo.png" alt="Vidéos">
-            </div>
-        </div>
-        </div>
-    </div>
-
-    </section>
-
+        </section>
 
 
     <!-- Footer -->
