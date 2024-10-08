@@ -4,8 +4,7 @@
 @color-light-grey: #f0f0f0;
 @color-dark-grey: #333333;
 @color-blue: #9EE0FF;
-@color-bar: #333;
-@color-bar-shadow: #000;
+@color-dark-blue: #1D79D8;
 
 // Fonts
 @font-default: 'Monomaniac One', sans-serif;
@@ -16,11 +15,12 @@
 // Sizes
 @size-icon: 30px;
 @size-h1: 6.5rem;
-@size-h2: 4rem;
+@size-h2: 3rem;
 @size-box: 1.5rem;
 @size-image-placeholder: 300px;
 @size-bar-height: 2px;
 @size-bar-width: 100%;
+@size-footer: 1.2rem;
 
 // Padding and Margin
 @padding-default: 20px;
@@ -113,11 +113,18 @@ h1 {
   font-family: @font-title !important;
   padding-top: 3%;
   padding-bottom: 3%;
+}
 
-  h2{
-    font-size: @size-h2 !important;
-  }
-  
+.deco{
+  a{
+    text-decoration: none;
+    color: @color-blue;
+  cursor: pointer;
+}
+}
+
+h2{
+  font-size: @size-h2 !important;
 }
 
 // Header
@@ -287,12 +294,13 @@ h1 {
   }
 }
 
+
 // Footer styles
 .horizontal-bar {
   width: 100%;
   height: @size-bar-height;
-  background-color: @color-bar;
-  box-shadow: 0 2px 5px @color-bar-shadow;
+  background-color: @color-dark-grey;
+  box-shadow: 0 2px 5px @color-black;
 }
 
 footer {
@@ -301,6 +309,7 @@ footer {
   font-family: @font-default;
   padding: @padding-default;
   margin-top: @margin-footer-top;
+  font-size: @size-footer;
 
   .footer-container {
     .flex-between();

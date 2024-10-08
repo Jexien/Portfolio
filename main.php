@@ -5,7 +5,9 @@
         <img src="img/Logo FM.png" alt="Mon Logo">
         <h1 class="cinzel">Bienvenue</h1>
         <button class="chevron">
-            <img src="img/Chevron_bas btn.png" alt="Chevron Bas">
+            <a href="#ss-titre">
+                <img src="img/Chevron_bas btn.png" alt="Chevron Bas" onmouseover="this.src='img/Chevron_bas btn_dark.png'" onmouseout="this.src='img/Chevron_bas btn.png'">
+            </a>
         </button>
     </div>
 
@@ -108,10 +110,12 @@
         </section>
         <!-- FIN SECTION PHOTO BENTO
         
-        <!-- Début "Mes travaux" -->
+         Début "Mes travaux" -->
         <section>
-            <div>
-                <h2 class="text-center cinzel" id="ss-titre">Découvrir mes travaux</h2>
+            <div class="deco">
+                <a href="#travaux">
+                    <h2 class="text-center cinzel" id="travaux">Découvrir mes travaux</h2>
+                </a>
             </div>
 
             <div class="container text-center mt-5">
