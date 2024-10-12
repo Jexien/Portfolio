@@ -424,25 +424,50 @@ label > span:last-child {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 15%; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .gallery-row {
+    margin: 0; /* Supprime la marge en version tablette et mobile */
+  }
+}
+
+@media (max-width: 800px) {
     .gallery-item {
         width: 48%; /* Pour tablettes, 2 images par ligne */
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 500px) {
   .gallery-item {
-    width: 70%;
-  }
-  .gallery-item img {
-    max-width: 40%;
-    height: auto; 
+    width: 100%; /* Pour mobiles, 1 image par ligne */
+    max-width: 52%; /* Limite la largeur de l'image à 250px */
+    max-height: 250px; /* Limite la hauteur de l'image à 250px */
+    margin: 2% auto; /* Centre l'image horizontalement */
   }
 }
 
+.btn-secondary {
+  float: left;
+  margin-left: 15%;
+  background-color: #E6CFF2;
+  color: #000;
+  border-radius: 25px 8px 25px 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 
+  &:hover {
+    background-color: darken(#E6CFF2, 10%);
+  }
+
+  img {
+    margin-right: 10px; /* Adjust as needed */
+  }
+}
+ 
 
     .modal-body {
         display: flex; /* Utilisation de flexbox pour centrer le contenu */

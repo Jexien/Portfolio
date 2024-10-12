@@ -331,6 +331,111 @@ label > span:last-child {
   padding-top: 5%;
   padding-bottom: 5%;
 }
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-item {
+  width: 32%;
+  margin-bottom: 15px;
+}
+.gallery-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 15%;
+}
+@media (max-width: 1024px) {
+  .gallery-row {
+    margin: 0;
+    /* Supprime la marge en version tablette et mobile */
+  }
+}
+@media (max-width: 800px) {
+  .gallery-item {
+    width: 48%;
+    /* Pour tablettes, 2 images par ligne */
+  }
+}
+@media (max-width: 500px) {
+  .gallery-item {
+    width: 100%;
+    /* Pour mobiles, 1 image par ligne */
+    max-width: 52%;
+    /* Limite la largeur de l'image à 250px */
+    max-height: 250px;
+    /* Limite la hauteur de l'image à 250px */
+    margin: 2% auto;
+    /* Centre l'image horizontalement */
+  }
+}
+.btn-secondary {
+  float: left;
+  margin-left: 15%;
+  background-color: #E6CFF2;
+  color: #000;
+  border-radius: 25px 8px 25px 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #d1a7e7;
+}
+.btn-secondary img {
+  margin-right: 10px;
+  /* Adjust as needed */
+}
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Utilisation de flexbox pour centrer le contenu */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Alignement en colonne */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Centre horizontalement */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Centre verticalement */
+  padding: 20px;
+  /* Ajout de padding pour plus d'espace autour de l'image */
+}
+#modalImage {
+  max-width: 90vw;
+  /* Limite la largeur de l'image à 90% de la largeur de l'écran */
+  max-height: 90vh;
+  /* Limite la hauteur de l'image à 80% de la hauteur de l'écran */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Conserve les proportions de l'image */
+  margin-bottom: 10px;
+  /* Ajout d'un espacement entre l'image et le texte */
+}
+.modal-content {
+  padding: 20px;
+  /* Ajoute du padding pour élargir le fond/bordure par rapport à l'image */
+  border-radius: 8px;
+  /* Arrondir les bords de la modal */
+  color: #000000;
+  /* Couleur du texte */
+}
 .horizontal-bar {
   width: 100%;
   height: 2px;
@@ -401,77 +506,4 @@ footer .footer-copyright {
   text-align: center;
   margin-top: 20px;
   color: #9EE0FF;
-}
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.gallery-item {
-  width: 32%;
-  margin-bottom: 15px;
-}
-.gallery-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-@media (max-width: 768px) {
-  .gallery-item {
-    width: 48%;
-    /* Pour tablettes, 2 images par ligne */
-  }
-}
-@media (max-width: 576px) {
-  .gallery-item {
-    width: 100%;
-    /* Pour mobiles, 1 image par ligne */
-  }
-}
-.modal-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* Utilisation de flexbox pour centrer le contenu */
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  /* Alignement en colonne */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* Centre horizontalement */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* Centre verticalement */
-  padding: 20px;
-  /* Ajout de padding pour plus d'espace autour de l'image */
-}
-#modalImage {
-  max-width: 90vw;
-  /* Limite la largeur de l'image à 90% de la largeur de l'écran */
-  max-height: 90vh;
-  /* Limite la hauteur de l'image à 80% de la hauteur de l'écran */
-  -o-object-fit: contain;
-     object-fit: contain;
-  /* Conserve les proportions de l'image */
-  margin-bottom: 10px;
-  /* Ajout d'un espacement entre l'image et le texte */
-}
-.modal-content {
-  padding: 20px;
-  /* Ajoute du padding pour élargir le fond/bordure par rapport à l'image */
-  border-radius: 8px;
-  /* Arrondir les bords de la modal */
-  color: #000000;
-  /* Couleur du texte */
 }

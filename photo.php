@@ -55,6 +55,14 @@ include 'header.php';
     </div>
 </div>
 
+<!-- Bouton pour retourner à l'accueil -->
+<div class="text-center mt-5">
+    <a href="index.php" class="btn btn-secondary">
+        Retour à l'accueil
+    </a>
+</div>
+
+
 <!-- Modal -->
 <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
