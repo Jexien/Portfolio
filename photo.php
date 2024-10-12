@@ -6,7 +6,7 @@ include 'header.php';
 
 
 <div class="container py-5">
-<div class="gallery-row">
+<div class="gallery-row row">
     <!-- 12 images pour la galerie -->
     <div class="gallery-item">
         <img src="img/Photo/orage.jpg" class="img-fluid rounded" alt="Photo 1">
@@ -56,9 +56,9 @@ include 'header.php';
 </div>
 
 <!-- Bouton pour retourner à l'accueil -->
-<div class="text-center mt-5">
+<div class="row justify-content-left">
     <a href="index.php" class="btn btn-secondary">
-        Retour à l'accueil
+        Retour
     </a>
 </div>
 

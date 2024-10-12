@@ -325,6 +325,32 @@ header {
 
 // PAGE CONTACT
 
+@media (max-width: 768px) {
+  .champ {
+    flex-direction: column;
+    align-items: flex-start;
+
+    label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 514px) {
+  .formulaire {
+    max-width: 100%;
+  }
+  input {
+    height: 30px !important;
+    font-size: 16px;
+  }
+}
+
 .form-container{
   h1{
     color: @color-white;
@@ -383,7 +409,7 @@ label > span:last-child {
 }
 
 .form_button{
-  width: 10%;
+  width: 20%;
   border-radius: @border-radius-button;
   background-color: @color-blue;
   color: @color-black;
@@ -395,6 +421,13 @@ label > span:last-child {
 
   &:hover {
     background-color: @color-dark-blue;
+  }
+}
+
+@media (max-width: 768px) {
+  .form_button {
+    width: 50%;
+
   }
 }
 
@@ -427,10 +460,9 @@ label > span:last-child {
     margin: 0 15%; 
 }
 
-@media (max-width: 1024px) {
-  .gallery-row {
-    margin: 0; /* Supprime la marge en version tablette et mobile */
-  }
+.row{
+  margin: 0 15% !important; 
+  display: flex;
 }
 
 @media (max-width: 800px) {
@@ -446,15 +478,17 @@ label > span:last-child {
     max-height: 250px; /* Limite la hauteur de l'image à 250px */
     margin: 2% auto; /* Centre l'image horizontalement */
   }
+  .row{
+    justify-content: center;
+  }
 }
 
 .btn-secondary {
-  float: left;
-  margin-left: 15%;
+  width: 156px;
+  margin : @margin-button;
   background-color: #E6CFF2;
   color: #000;
-  border-radius: 25px 8px 25px 8px;
-  padding: 10px 20px;
+  border-radius: @border-radius-button;
   text-decoration: none;
   font-size: 1rem;
   transition: background-color 0.3s;

@@ -249,6 +249,33 @@ header ul li a {
   margin-bottom: 40px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .champ {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .champ label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .champ input {
+    width: 100%;
+  }
+}
+@media (max-width: 514px) {
+  .formulaire {
+    max-width: 100%;
+  }
+  input {
+    height: 30px !important;
+    font-size: 16px;
+  }
+}
 .form-container h1 {
   color: #ffffff;
   font-size: 3rem;
@@ -310,7 +337,7 @@ label > span:last-child {
   color: red;
 }
 .form_button {
-  width: 10%;
+  width: 20%;
   border-radius: 20px 0px 20px 5px;
   background-color: #9EE0FF;
   color: #000000;
@@ -323,6 +350,11 @@ label > span:last-child {
 }
 .form_button:hover {
   background-color: #1D79D8;
+}
+@media (max-width: 768px) {
+  .form_button {
+    width: 50%;
+  }
 }
 .h1photo {
   color: #ffffff;
@@ -353,11 +385,11 @@ label > span:last-child {
       flex-wrap: wrap;
   margin: 0 15%;
 }
-@media (max-width: 1024px) {
-  .gallery-row {
-    margin: 0;
-    /* Supprime la marge en version tablette et mobile */
-  }
+.row {
+  margin: 0 15% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media (max-width: 800px) {
   .gallery-item {
@@ -376,14 +408,18 @@ label > span:last-child {
     margin: 2% auto;
     /* Centre l'image horizontalement */
   }
+  .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .btn-secondary {
-  float: left;
-  margin-left: 15%;
+  width: 156px;
+  margin: 20px 0;
   background-color: #E6CFF2;
   color: #000;
-  border-radius: 25px 8px 25px 8px;
-  padding: 10px 20px;
+  border-radius: 20px 0px 20px 5px;
   text-decoration: none;
   font-size: 1rem;
   -webkit-transition: background-color 0.3s;
