@@ -9,40 +9,49 @@ include 'header.php';
 <div class="gallery-row">
     <!-- 12 images pour la galerie -->
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 1">
+        <img src="img/Photo/orage.jpg" class="img-fluid rounded" alt="Photo 1">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 2">
+        <img src="img/Photo/pissenlit.jpg" class="img-fluid rounded" alt="Pissenlit">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 3">
+        <img src="img/Photo/couchesoleil.jpg" class="img-fluid rounded" alt="Couché de soleil">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 4">
+        <img src="img/Photo/chapelle.jpg" class="img-fluid rounded" alt="Chapelle">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 5">
+        <img src="img/Photo/graine_pissenlit.jpg" class="img-fluid rounded" alt="Graine de pissenlit">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 6">
+        <img src="img/Photo/lune.jpg" class="img-fluid rounded" alt="Lune">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 7">
+        <img src="img/Photo/orgere.jpg" class="img-fluid rounded" alt="Orgère">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 8">
+        <img src="img/Photo/mesange.jpg" class="img-fluid rounded" alt="Mésange">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 9">
+        <img src="img/Photo/chat.jpg" class="img-fluid rounded" alt="Chat">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 10">
+        <img src="img/Photo/tikky.jpg" class="img-fluid rounded" alt="Tikky">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 11">
+        <img src="img/Photo/marmotte.jpg" class="img-fluid rounded" alt="Marmotte">
     </div>
     <div class="gallery-item">
-        <img src="img/chat3.jpg" class="img-fluid rounded" alt="Photo 12">
+        <img src="img/Photo/fleur.jpg" class="img-fluid rounded" alt="Fleur">
+    </div>
+    <div class="gallery-item">
+        <img src="img/Photo/grenoble.jpg" class="img-fluid rounded" alt="Grenoble">
+    </div>
+    <div class="gallery-item">
+        <img src="img/Photo/turin.jpg" class="img-fluid rounded" alt="Turin">
+    </div>
+    <div class="gallery-item">
+        <img src="img/Photo/bilbao.jpg" class="img-fluid rounded" alt="Bilbao">
     </div>
 </div>
 

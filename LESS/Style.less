@@ -409,6 +409,60 @@ label > span:last-child {
   padding-bottom: 5%;
 }
 
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.gallery-item {
+    width: 32%;
+    margin-bottom: 15px;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 48%; /* Pour tablettes, 2 images par ligne */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-item {
+        width: 100%; /* Pour mobiles, 1 image par ligne */
+    }
+}
+
+
+
+    .modal-body {
+        display: flex; /* Utilisation de flexbox pour centrer le contenu */
+        flex-direction: column; /* Alignement en colonne */
+        align-items: center; /* Centre horizontalement */
+        justify-content: center; /* Centre verticalement */
+        padding: 20px; /* Ajout de padding pour plus d'espace autour de l'image */
+    }
+
+    #modalImage {
+        max-width: 90vw; /* Limite la largeur de l'image à 90% de la largeur de l'écran */
+        max-height: 90vh; /* Limite la hauteur de l'image à 80% de la hauteur de l'écran */
+        object-fit: contain; /* Conserve les proportions de l'image */
+        margin-bottom: 10px; /* Ajout d'un espacement entre l'image et le texte */
+    }
+
+    .modal-content {
+        padding: 20px; /* Ajoute du padding pour élargir le fond/bordure par rapport à l'image */
+        border-radius: 8px; /* Arrondir les bords de la modal */
+        color: @color-black; /* Couleur du texte */
+    }
+
+// FIN PAGE GALERIE ____________________________________________________________________________________________________________________________________________
+
 // Footer styles
 .horizontal-bar {
   width: 100%;
@@ -462,54 +516,3 @@ footer {
 // FIN Footer styles ____________________________________________________________________________________________________________________________________________
 
 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-.gallery-item {
-    width: 32%;
-    margin-bottom: 15px;
-}
-
-.gallery-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-    .gallery-item {
-        width: 48%; /* Pour tablettes, 2 images par ligne */
-    }
-}
-
-@media (max-width: 576px) {
-    .gallery-item {
-        width: 100%; /* Pour mobiles, 1 image par ligne */
-    }
-}
-
-
-
-    .modal-body {
-        display: flex; /* Utilisation de flexbox pour centrer le contenu */
-        flex-direction: column; /* Alignement en colonne */
-        align-items: center; /* Centre horizontalement */
-        justify-content: center; /* Centre verticalement */
-        padding: 20px; /* Ajout de padding pour plus d'espace autour de l'image */
-    }
-
-    #modalImage {
-        max-width: 90vw; /* Limite la largeur de l'image à 90% de la largeur de l'écran */
-        max-height: 90vh; /* Limite la hauteur de l'image à 80% de la hauteur de l'écran */
-        object-fit: contain; /* Conserve les proportions de l'image */
-        margin-bottom: 10px; /* Ajout d'un espacement entre l'image et le texte */
-    }
-
-    .modal-content {
-        padding: 20px; /* Ajoute du padding pour élargir le fond/bordure par rapport à l'image */
-        border-radius: 8px; /* Arrondir les bords de la modal */
-        color: @color-black; /* Couleur du texte */
-    }
