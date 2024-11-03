@@ -45,7 +45,6 @@
 @position-chevron-bottom: 20px;
 @position-chevron-left: 50%;
 
-
 // Fin Variables ____________________________________________________________________________________________________________________________________________
 
 // Mixins
@@ -119,48 +118,44 @@ body {
   padding-bottom: 3%;
 }
 
-a{
+a {
   text-decoration: none;
   color: @color-blue;
 }
-.deco{
-  a{
-  cursor: pointer;
+.deco {
+  a {
+    cursor: pointer;
+  }
 }
-}
-.h2{
+.h2 {
   font-size: @size-h2 !important;
 }
 
-.h2small{
+.h2small {
   font-size: @size-h3 !important;
 }
 
 html {
   font-size: 16px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
     font-size: 12px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 10px;
   }
 }
 
 // FIN Base styles ____________________________________________________________________________________________________________________________________________
 
-
-
-
-// Header
 // Header
 header {
-  position: absolute; /* ou fixed selon ce que tu veux obtenir */
+  position: absolute;
   top: 0;
   width: 100%;
-  z-index: 10; /* Assure que le header est devant l'image */
-  background-color: transparent; /* ou avec opacité si besoin */
+  z-index: 10;
+  background-color: transparent;
   color: @color-black;
   font-size: 1rem;
 
@@ -181,8 +176,6 @@ header {
     }
   }
 }
-
-
 // FIN Header ____________________________________________________________________________________________________________________________________________
 
 .hero-section {
@@ -215,9 +208,6 @@ header {
   }
 }
 
-
-
-
 // FIN Hero section ____________________________________________________________________________________________________________________________________________
 
 // Qui je suis section
@@ -238,7 +228,7 @@ header {
 .description {
   color: @color-white;
   margin-top: 20px;
-    font-family: @font-box;
+  font-family: @font-box;
 }
 .title {
   color: @color-blue;
@@ -246,9 +236,30 @@ header {
   margin-bottom: 40px;
 }
 
+@media (max-width: 992px) {
+  .qui-je-suis .image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .qui-je-suis .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 // FIN Qui je suis section ____________________________________________________________________________________________________________________________________________
 
 // Bentot section
+.mobile {
+  display: none;
+}
+
 .skill-text {
   font-size: @size-h4;
   margin: 0 auto;
@@ -312,20 +323,123 @@ header {
   }
 }
 
+@media (max-width: 992px) {
+  .skill-box, .skill-box2, .skill-box3 {
+    text-align: center;
+    display: flex;
+    margin: 0 auto 15px;
+    padding: @padding-default;
+    border-radius: @border-radius-small;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bento {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-box {
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .skill-box2 {
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+  .skill-box3 {
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .center-box {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .h2small{
+    margin-top: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  .skill-box, .skill-box2, .skill-box3 {
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto 15px;
+    padding: @padding-default;
+    border-radius: @border-radius-small;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center-box {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .h2small{
+    margin-top: 20%;
+  }
+}
+
 // FIN Bentot section ____________________________________________________________________________________________________________________________________________
 
-.portfolio-item {
-  padding-bottom: 20%;
-  .portfolio-title {
-    margin-bottom: 40px; 
-    text-align: center; 
+// Mes travaux section
+
+@media (max-width: 992px) {
+  .portfolio-item img {
+      width: 80%;
+      max-width: 300px;
+      height: auto; 
   }
 }
 
 
+@media (max-width: 500px) {
+  .col-6 {
+      width: 100%;
+      display: block;
+  }
+  .portfolio-item img {
+    width: 60%;
+    max-width: 200px;
+    height: auto; 
+    margin-bottom: 40px;
+}
+}
+
+
+// FIN Mes travaux section ____________________________________________________________________________________________________________________________________________
+
 // PAGE CONTACT
 
-@media (max-width: 768px) {
+// .contactpage {
+//   background-color: #181818;
+// }
+
+@media (max-width: 992px) {
   .champ {
     flex-direction: column;
     align-items: flex-start;
@@ -341,7 +455,7 @@ header {
   }
 }
 
-@media (max-width: 514px) {
+@media (max-width: 500px) {
   .formulaire {
     max-width: 100%;
   }
@@ -424,15 +538,13 @@ label > span:last-child {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .form_button {
     width: 50%;
-
   }
 }
-
-
 // FIN PAGE CONTACT ____________________________________________________________________________________________________________________________________________
+
 // Contact BIS
 .bish1{
   font-size: @size-h2;
@@ -449,6 +561,8 @@ label > span:last-child {
   padding-bottom: 2%;
 }
 //Fin Contact BIS ____________________________________________________________________________________________________________________________________________
+
+// PAGE GALERIE
 
 .h1photo{
   color: @color-white;
@@ -477,22 +591,25 @@ label > span:last-child {
 }
 
 .row{
-  margin: 0 15% !important; 
   display: flex;
 }
 
-@media (max-width: 800px) {
+.rowgallerie{
+  margin: 0 15% !important; 
+}
+
+@media (max-width: 992px) {
     .gallery-item {
-        width: 48%; /* Pour tablettes, 2 images par ligne */
+        width: 48%;
     }
 }
 
 @media (max-width: 500px) {
   .gallery-item {
-    width: 100%; /* Pour mobiles, 1 image par ligne */
-    max-width: 52%; /* Limite la largeur de l'image à 250px */
-    max-height: 250px; /* Limite la hauteur de l'image à 250px */
-    margin: 2% auto; /* Centre l'image horizontalement */
+    width: 100%;
+    max-width: 52%;
+    max-height: 250px;
+    margin: 2% auto;
   }
   .row{
     justify-content: center;
@@ -514,31 +631,30 @@ label > span:last-child {
   }
 
   img {
-    margin-right: 10px; /* Adjust as needed */
+    margin-right: 10px;
   }
 }
- 
 
-    .modal-body {
-        display: flex; /* Utilisation de flexbox pour centrer le contenu */
-        flex-direction: column; /* Alignement en colonne */
-        align-items: center; /* Centre horizontalement */
-        justify-content: center; /* Centre verticalement */
-        padding: 20px; /* Ajout de padding pour plus d'espace autour de l'image */
-    }
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px; 
+}
 
-    #modalImage {
-        max-width: 90vw; /* Limite la largeur de l'image à 90% de la largeur de l'écran */
-        max-height: 90vh; /* Limite la hauteur de l'image à 80% de la hauteur de l'écran */
-        object-fit: contain; /* Conserve les proportions de l'image */
-        margin-bottom: 10px; /* Ajout d'un espacement entre l'image et le texte */
-    }
+#modalImage {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
 
-    .modal-content {
-        padding: 20px; /* Ajoute du padding pour élargir le fond/bordure par rapport à l'image */
-        border-radius: 8px; /* Arrondir les bords de la modal */
-        color: @color-black; /* Couleur du texte */
-    }
+.modal-content {
+    padding: 20px;
+    border-radius: 8px;
+    color: @color-black;
+}
 
 // FIN PAGE GALERIE ____________________________________________________________________________________________________________________________________________
 
@@ -551,11 +667,10 @@ label > span:last-child {
 }
 
 footer {
-  background-color: @color-black;
   color: @color-blue;
   font-family: @font-default;
   padding: @padding-default;
-  margin-top: @margin-footer-top;
+  padding-top: @margin-footer-top;
   font-size: @size-footer;
 
   .footer-container {
@@ -591,7 +706,4 @@ footer {
     color: @color-blue;
   }
 }
-
 // FIN Footer styles ____________________________________________________________________________________________________________________________________________
-
-

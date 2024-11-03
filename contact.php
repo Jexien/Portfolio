@@ -1,35 +1,53 @@
-<?php include 'header.php'; ?>
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+$background_color = "black";
+
+// Couleur en fonction de la page
+if ($current_page == 'contact.php' || $current_page == 'contactbis.php') {
+    $background_color = "#181818";
+}else {
+    $background_color = "black";
+}
+
+include 'header.php'; ?>
+
 <style>
+    :root {
+        --background-color: <?= $background_color ?> !important;
+    }
     body {
-        background-color: #181818;
+        background-color: var(--background-color) !important;
     }
 </style>
+
+
+
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $name = htmlspecialchars($_POST['name']);
+//     $email = htmlspecialchars($_POST['email']);
+//     $phone = htmlspecialchars($_POST['phone']);
 
-    $to = "thegaldX@gmail.com";
-    $subject = "Nouveau contact de " . $name;
-    $message = "Nom: " . $name . "\nEmail: " . $email . "\nNuméro de téléphone: " . $phone;
-    $headers = "From: " . $email;
+//     $to = "thegaldX@gmail.com";
+//     $subject = "Nouveau contact de " . $name;
+//     $message = "Nom: " . $name . "\nEmail: " . $email . "\nNuméro de téléphone: " . $phone;
+//     $headers = "From: " . $email;
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "<p class='success-message'>Votre message a été envoyé avec succès.</p>";
-    } else {
-        echo "<p class='error-message'>Échec de l'envoi du message. Veuillez réessayer.</p>";
-    }
-}
+//     if (mail($to, $subject, $message, $headers)) {
+//         echo "<p class='success-message'>Votre message a été envoyé avec succès.</p>";
+//     } else {
+//         echo "<p class='error-message'>Échec de l'envoi du message. Veuillez réessayer.</p>";
+//     }
+// }
 ?>
 
-<div class="form-container">
+<div class="form-container contactpage">
     <div class="d-flex justify-content-center">
         <h1 class="col-6 my-5 text-center">Formulaire de contact</h1>
     </div>
-        <div class="d-flex justify-content-center">
-            <p class="notice col-6 text-center">Merci de renseigner les champs suivants</p>
-        </div>
+    <div class="d-flex justify-content-center">
+        <p class="notice col-6 text-center">Merci de renseigner les champs suivants</p>
+    </div>
     <form class="formulaire" method="post" action="">
         <div class="champ">
             <label class="col-3 my-5" for="name">Nom &nbsp;<span>*</span></label>
@@ -45,14 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </form>
     <div class="d-flex justify-content-center">
-        <button class="form_button col-3" type="submit">Envoyer le formulaire</button>
+        <button class="form_button col-3" type="submit" formaction="contactbis.php">Envoyer le formulaire</button>
     </div>
     
 </div>
 
-    <?php include 'footer.php'; ?>
-    <style>
-        footer {
-            background-color: #181818;
-        }
-    </style>
+<?php include 'footer.php'; ?>

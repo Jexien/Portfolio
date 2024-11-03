@@ -1,4 +1,4 @@
-<footer>
+<footer class="colorHeaderFooter">
 <div class="horizontal-bar"></div>
   <div class="footer-container">
     <div class="footer-column">

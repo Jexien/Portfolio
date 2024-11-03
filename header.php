@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="colorHeaderFooter">
         <div class="container">
             <nav>
                 <ul>

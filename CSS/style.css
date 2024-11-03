@@ -34,25 +34,22 @@ a {
 html {
   font-size: 16px;
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   html {
     font-size: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html {
     font-size: 10px;
   }
 }
 header {
   position: absolute;
-  /* ou fixed selon ce que tu veux obtenir */
   top: 0;
   width: 100%;
   z-index: 10;
-  /* Assure que le header est devant l'image */
   background-color: transparent;
-  /* ou avec opacité si besoin */
   color: #000000;
   font-size: 1rem;
 }
@@ -148,6 +145,37 @@ header ul li a {
   font-size: 3rem;
   margin-bottom: 40px;
 }
+@media (max-width: 992px) {
+  .qui-je-suis .image-placeholder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+  }
+  .qui-je-suis .col-lg-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.mobile {
+  display: none;
+}
 .skill-text {
   font-size: 1.25rem;
   margin: 0 auto;
@@ -242,14 +270,119 @@ header ul li a {
   width: 75px;
   height: 75px;
 }
-.portfolio-item {
-  padding-bottom: 20%;
+@media (max-width: 992px) {
+  .skill-box,
+  .skill-box2,
+  .skill-box3 {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto 15px;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bento {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skill-box img {
+    width: 45px;
+    height: 45px;
+  }
+  .skill-box2 img {
+    height: 50px;
+    width: auto;
+  }
+  .skill-box3 img {
+    width: 45px;
+    height: 45px;
+  }
+  .center-box {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .h2small {
+    margin-top: 40%;
+  }
 }
-.portfolio-item .portfolio-title {
-  margin-bottom: 40px;
-  text-align: center;
+@media (max-width: 500px) {
+  .skill-box,
+  .skill-box2,
+  .skill-box3 {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0 auto 15px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .center-box {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .h2small {
+    margin-top: 20%;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .portfolio-item img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .col-6 {
+    width: 100%;
+    display: block;
+  }
+  .portfolio-item img {
+    width: 60%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 992px) {
   .champ {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -267,7 +400,7 @@ header ul li a {
     width: 100%;
   }
 }
-@media (max-width: 514px) {
+@media (max-width: 500px) {
   .formulaire {
     max-width: 100%;
   }
@@ -351,7 +484,7 @@ label > span:last-child {
 .form_button:hover {
   background-color: #1D79D8;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .form_button {
     width: 50%;
   }
@@ -399,27 +532,24 @@ label > span:last-child {
   margin: 0 15%;
 }
 .row {
-  margin: 0 15% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-@media (max-width: 800px) {
+.rowgallerie {
+  margin: 0 15% !important;
+}
+@media (max-width: 992px) {
   .gallery-item {
     width: 48%;
-    /* Pour tablettes, 2 images par ligne */
   }
 }
 @media (max-width: 500px) {
   .gallery-item {
     width: 100%;
-    /* Pour mobiles, 1 image par ligne */
     max-width: 52%;
-    /* Limite la largeur de l'image à 250px */
     max-height: 250px;
-    /* Limite la hauteur de l'image à 250px */
     margin: 2% auto;
-    /* Centre l'image horizontalement */
   }
   .row {
     -webkit-box-pack: center;
@@ -443,47 +573,34 @@ label > span:last-child {
 }
 .btn-secondary img {
   margin-right: 10px;
-  /* Adjust as needed */
 }
 .modal-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* Utilisation de flexbox pour centrer le contenu */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* Alignement en colonne */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* Centre horizontalement */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /* Centre verticalement */
   padding: 20px;
-  /* Ajout de padding pour plus d'espace autour de l'image */
 }
 #modalImage {
   max-width: 90vw;
-  /* Limite la largeur de l'image à 90% de la largeur de l'écran */
   max-height: 90vh;
-  /* Limite la hauteur de l'image à 80% de la hauteur de l'écran */
   -o-object-fit: contain;
      object-fit: contain;
-  /* Conserve les proportions de l'image */
   margin-bottom: 10px;
-  /* Ajout d'un espacement entre l'image et le texte */
 }
 .modal-content {
   padding: 20px;
-  /* Ajoute du padding pour élargir le fond/bordure par rapport à l'image */
   border-radius: 8px;
-  /* Arrondir les bords de la modal */
   color: #000000;
-  /* Couleur du texte */
 }
 .horizontal-bar {
   width: 100%;
@@ -493,11 +610,10 @@ label > span:last-child {
           box-shadow: 0 2px 5px #000000;
 }
 footer {
-  background-color: #000000;
   color: #9EE0FF;
   font-family: 'Monomaniac One', sans-serif;
   padding: 20px;
-  margin-top: 200px;
+  padding-top: 200px;
   font-size: 1.2rem;
 }
 footer .footer-container {
