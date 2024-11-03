@@ -79,13 +79,16 @@ include 'header.php';
     </div>
 </div>
 
-<!-- Bouton pour retourner en haut de la page -->
+<!-- Renvoie en haut -->
 <a href="#" id="backToTopBtn" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none;">
     Retour en haut
 </a>
 
+
+
+<!-- Script temporaire, à transférer dans un fichier .js -->
+
 <script>
-    // Afficher le bouton lorsque l'utilisateur fait défiler vers le bas
     window.onscroll = function() {
         var backToTopBtn = document.getElementById('backToTopBtn');
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -96,7 +99,7 @@ include 'header.php';
     };
 </script>
 
-<!-- Script pour afficher l'image dans la modal -->
+<!-- Modal bootstrap -->
 <script>
     document.querySelectorAll('.gallery-item img').forEach(img => {
         img.addEventListener('click', function() {
@@ -114,5 +117,3 @@ include 'header.php';
 <?php
 include 'footer.php';
 ?>
-
-<!-- PLOP TEST COMMIT 2 -->
