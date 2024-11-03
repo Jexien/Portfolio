@@ -48,7 +48,9 @@ include 'header.php'; ?>
     <div class="d-flex justify-content-center">
         <p class="notice col-6 text-center">Merci de renseigner les champs suivants</p>
     </div>
-    <form class="formulaire" method="post" action="">
+
+    <!-- Formulaire avec l'action vers contactbis.php -->
+    <form class="formulaire" method="post" action="contactbis.php">
         <div class="champ">
             <label class="col-3 my-5" for="name">Nom &nbsp;<span>*</span></label>
             <input class="col-6" type="text" id="name" name="name" placeholder="Pierre Durand" required>
@@ -61,11 +63,13 @@ include 'header.php'; ?>
             <label class="col-3 my-5" for="phone">Numéro de téléphone</label>
             <input class="col-6" type="text" id="phone" name="phone" placeholder="06.08.10.12.14">
         </div>
+
+        <!-- Le bouton permet d'accéder à la page -bis sans vérifier la réussite ou l'échec de l'envoie, afin de pouvoir visionner toutes les pages -->
+        <div class="d-flex justify-content-center">
+            <button class="form_button col-3" type="submit">Envoyer le formulaire</button>
+        </div>
     </form>
-    <div class="d-flex justify-content-center">
-        <button class="form_button col-3" type="submit" formaction="contactbis.php">Envoyer le formulaire</button>
-    </div>
-    
 </div>
+
 
 <?php include 'footer.php'; ?>
