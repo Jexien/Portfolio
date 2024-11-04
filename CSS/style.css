@@ -53,6 +53,14 @@ header {
   color: #000000;
   font-size: 1rem;
 }
+header .menu-toggle {
+  display: none;
+}
+header .menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +78,25 @@ header ul li {
 header ul li a {
   color: #9EE0FF;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  header .menu ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    background-color: #000000;
+  }
+  header .menu-icon {
+    display: block;
+  }
+  header .menu-toggle:checked + .menu-icon + .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .hero-section {
   -webkit-box-orient: vertical;

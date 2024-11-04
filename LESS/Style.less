@@ -159,6 +159,16 @@ header {
   color: @color-black;
   font-size: 1rem;
 
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
   ul {
     display: flex;
     justify-content: space-evenly;
@@ -173,6 +183,26 @@ header {
         color: @color-blue;
         text-decoration: none;
       }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .menu {
+      ul {
+        display: none; // Cache le menu par défaut
+        flex-direction: column;
+        padding: 10px;
+        background-color: @color-black;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    // Affiche le menu lorsque la case à cocher est activée
+    .menu-toggle:checked + .menu-icon + .menu ul {
+      display: flex;
     }
   }
 }

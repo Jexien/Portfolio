@@ -21,14 +21,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="colorHeaderFooter">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="contact.php">Me contacter</a></li>
-                    <li><a href="index.php#Logo">Mes travaux</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="colorHeaderFooter">
+    <div class="container">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="contact.php">Me contacter</a></li>
+                <li><a href="index.php#Logo">Mes travaux</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
