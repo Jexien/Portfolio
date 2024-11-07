@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 17.61">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .45px;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <line class="cls-1" x1="382.6" y1="8.81" x2="382.79" y2="8.81"/>
+    <polyline class="cls-1" points="325.44 8.81 366.26 8.81 366.36 8.81"/>
+    <line class="cls-1" x1="268.47" y1="8.81" x2="308.94" y2="8.81"/>
+    <line class="cls-1" x1="211.69" y1="8.81" x2="251.97" y2="8.81"/>
+    <line class="cls-1" x1="154.41" y1="8.81" x2="195.24" y2="8.81"/>
+    <polyline class="cls-1" points="97.05 8.81 97.21 8.81 138.07 8.81"/>
+    <polyline class="cls-1" points="0 8.81 80.77 8.81 80.86 8.81"/>
+    <rect class="cls-1" x="83" y="2.81" width="12" height="12" transform="translate(32.29 -60.35) rotate(45)"/>
+    <rect class="cls-1" x="140.21" y="2.81" width="12" height="12" transform="translate(49.05 -100.81) rotate(45)"/>
+    <rect class="cls-1" x="254.21" y="2.81" width="12" height="12" transform="translate(82.44 -181.42) rotate(45)"/>
+    <rect class="cls-1" x="311.19" y="2.81" width="12" height="12" transform="translate(99.13 -221.71) rotate(45)"/>
+    <polyline class="cls-1" points="194.92 8.81 203.4 .32 211.89 8.81 203.4 17.29 194.92 8.81"/>
+    <polyline class="cls-1" points="383.02 8.81 374.53 17.29 366.05 8.81 374.53 .32 383.02 8.81"/>
+    <line class="cls-1" x1="383" y1="8.81" x2="463" y2="8.81"/>
+  </g>
+</svg>

@@ -134,16 +134,20 @@
                     <!-- Logo et Identité Visuelle -->
                     <div class="col-6">
                         <div class="portfolio-item">
-                            <h3 class="portfolio-title" id="Logo">Logos et Identité visuelle</h3>
-                            <img src="img/id_logo.png" alt="Logos et Identité visuelle">
+                            <a href="logos.php">
+                                <h3 class="portfolio-title" id="Logo">Logos et Identité visuelle</h3>
+                                <img src="img/id_logo.png" alt="Logos et Identité visuelle">
+                            </a>
                         </div>
                     </div>
 
                     <!-- Sites web et Maquettes -->
                     <div class="col-6">
                         <div class="portfolio-item">
-                            <h3 class="portfolio-title">Sites web et Maquettes</h3>
-                            <img src="img/site.png" alt="Sites web et Maquettes">
+                            <a href="webmaquette.php">
+                                <h3 class="portfolio-title">Sites web et Maquettes</h3>
+                                <img src="img/site.png" alt="Sites web et Maquettes">
+                            </a>
                         </div>
                     </div>
                 </div>

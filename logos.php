@@ -1,5 +1,6 @@
 <?php include 'header.php'; ?>
 
+
 <div class="vdt container my-4">
   <div class="row align-items-center">
     <!-- Image à gauche -->
@@ -43,6 +44,36 @@
         <img src="img/naturel.png" alt="Naturel" style="background-color: white;">
         <figcaption>Produits naturels</figcaption>
     </figure>
+</div>
+
+<div id="projectCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="cafein.php">
+                <img src="img/café-03-02.png" class="d-block w-100" alt="Café'in">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Café'in</h5>
+                </div>
+            </a>
+        </div>
+        <div class="carousel-item">
+            <a href="tresor.php">
+                <img src="img/trésor d'épices.png" class="d-block w-100" alt="Trésor d'épices">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Trésor d'épices</h5>
+                </div>
+            </a>
+        </div>
+        <!-- Add more carousel items here for future projects -->
+    </div>
+    <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+    </a>
+    <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+    </a>
 </div>
 
 

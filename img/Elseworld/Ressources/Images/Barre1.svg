@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 173.44 375">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#Dégradé_sans_nom_17-5);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 2.5px;
+      }
+
+      .cls-2 {
+        stroke: url(#Dégradé_sans_nom_17);
+        stroke-width: 4px;
+      }
+
+      .cls-3 {
+        stroke: url(#Dégradé_sans_nom_17-4);
+      }
+
+      .cls-6 {
+        fill: #fff;
+        font-family: Repo-Light, Repo;
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        stroke: url(#Dégradé_sans_nom_17-2);
+      }
+
+      .cls-5 {
+        stroke: url(#Dégradé_sans_nom_17-3);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_17" data-name="Dégradé sans nom 17" x1="166.13" y1="46.01" x2="2.75" y2="328.99" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0086aa"/>
+      <stop offset="1" stop-color="red"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_17-2" data-name="Dégradé sans nom 17" x1="91.73" y1="33.24" x2="78.14" y2="56.76" xlink:href="#Dégradé_sans_nom_17"/>
+    <linearGradient id="Dégradé_sans_nom_17-3" data-name="Dégradé sans nom 17" x1="91.73" y1="128.24" x2="78.14" y2="151.76" xlink:href="#Dégradé_sans_nom_17"/>
+    <linearGradient id="Dégradé_sans_nom_17-4" data-name="Dégradé sans nom 17" x1="91.73" y1="223.24" x2="78.14" y2="246.76" xlink:href="#Dégradé_sans_nom_17"/>
+    <linearGradient id="Dégradé_sans_nom_17-5" data-name="Dégradé sans nom 17" x1="91.73" y1="318.24" x2="78.14" y2="341.76" xlink:href="#Dégradé_sans_nom_17"/>
+  </defs>
+  <line class="cls-2" x1="84.44" x2="84.44" y2="375"/>
+  <line class="cls-4" x1="59.94" y1="45" x2="109.94" y2="45"/>
+  <line class="cls-5" x1="59.94" y1="140" x2="109.94" y2="140"/>
+  <line class="cls-3" x1="59.94" y1="235" x2="109.94" y2="235"/>
+  <line class="cls-1" x1="59.94" y1="330" x2="109.94" y2="330"/>
+  <text class="cls-6" transform="translate(2.55 42.46)"><tspan x="0" y="0">48,858053</tspan></text>
+  <text class="cls-6" transform="translate(111.04 54.65)"><tspan x="0" y="0">2,2944991</tspan></text>
+  <text class="cls-6" transform="translate(0 138.69)"><tspan x="0" y="0">-33,924947</tspan></text>
+  <text class="cls-6" transform="translate(109.57 151.61)"><tspan x="0" y="0">139,691798</tspan></text>
+  <text class="cls-6" transform="translate(.77 231.05)"><tspan x="0" y="0">-22,906814</tspan></text>
+  <text class="cls-6" transform="translate(110.28 245.12)"><tspan x="0" y="0">-0,127898</tspan></text>
+  <text class="cls-6" transform="translate(2.77 325.95)"><tspan x="0" y="0">51,507465</tspan></text>
+  <text class="cls-6" transform="translate(109.6 343.16)"><tspan x="0" y="0">36,821992</tspan></text>
+</svg>

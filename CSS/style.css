@@ -612,6 +612,59 @@ label > span:last-child {
   padding-bottom: 3%;
   text-align: center;
 }
+.carousel {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carousel .carousel-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.carousel .carousel-inner .carousel-item {
+  min-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: rgba(29, 121, 216, 0.3);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.carousel .carousel-control-prev:hover,
+.carousel .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.carousel .carousel-control-prev {
+  left: 10px;
+}
+.carousel .carousel-control-next {
+  right: 10px;
+}
+@media (max-width: 992px) {
+  .carousel {
+    max-width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .carousel {
+    max-width: 100%;
+  }
+}
 .gallery-bento {
   display: -ms-grid;
   display: grid;
@@ -674,6 +727,61 @@ label > span:last-child {
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 100px;
+}
+.center-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 35%;
+  margin: 10px;
+}
+.responsive-img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.websitetxt {
+  max-width: 60%;
+  margin-left: 10%;
+}
+.websitetitle {
+  max-width: 60%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.btn-primary {
+  margin-left: 10%;
 }
 .horizontal-bar {
   width: 100%;

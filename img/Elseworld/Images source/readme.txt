@@ -1,0 +1,1 @@
+Ce dossier contient les images sources et d'autres documents annexes comme la maquette, qui ont été utilisés pour réaliser l'intégration

@@ -1,0 +1,687 @@
+/* Police utilisé, en local*/
+@font-face {
+  font-family: "Repo";
+  src:
+    local("REPO"),
+    url("Repo.otf") format("opentype") tech(reg),
+}
+
+/* Style du body et paramètres globaux des pages
+font-family -> déclarer la police pour l'ensemble de la page
+background-image -> mettre une image en arrière plan pour l'ensemble de la page
+-size : cover -> dire à l'image de recouvrir la page
+-color -> couleur de fond de la page si l'image ne charge pas 
+color -> couleur du texte sur la page
+margin -> Marge du body sur l'ensemble de la page
+paddind -> padding du body
+height -> Définit la hauteur du body : sécurité pour éviter certains bugs */
+body {
+  font-family: Repo;
+  background-image: url("./Ressources/Images/fond.webp") ;
+  background-size: cover;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0px;
+  height: 100vh;
+}
+
+
+/* Style de la première partie de la page avec une image en arrière-plan
+background image -> Idem définit l'image de fond sur la partie ciblée
+-repeat -> ne pas répéter l'image (sur la longueur de la page/partie)
+-position -> fixe le centre de l'image au centre de la page; utile pour la version mobile
+padding-bottom -> fixe du padding sous le contenu cible
+-top -> idem mais en haut*/
+.part1 {
+  background-image: url("./Ressources/Images/Elseworld.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center center;
+  padding-bottom: 20em;
+  padding-top: 15%;
+}
+
+/* Styles pour les titres h1 et h2 
+Couleur de texte en blanc
+Police repo (répété pour garder / changer juste la police de titre)
+taille de police de 3em pour H1
+                    4em pour H2*/
+h1 {
+  color: white;
+  text-align: center;
+  font-family: Repo;
+  font-size: 3em;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  background-repeat: no-repeat;
+  font-family: Repo;
+  font-size: 4em;
+}
+
+/* Style des paragraphes 
+Centré et blanc*/
+p {
+  text-align: center;
+  color: white;
+}
+
+/*Paramètres de la barre de navigation en haut de page
+largeur de 100%
+pas de marge
+display: flex -> permet de définir la répartition et le positionnement des blocs
+ici justify-content: space-between -> espace maximal entre deux éléments, avec le même écart entre chaque bloc*/
+nav.menubar{
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Inverser la couleur et définir la position des icones X, facebook, partager et du menu burger
+filter: invert -> inverse les couleurs de l'image
+width -> définit la taille
+object-position: left top -> envoie les images en haut à gauche
+padding-right
+       -left    -> définit l'espace interne entre chaque élément à gauche et à droite*/
+.menu>img, .X>img, .fcb>img {
+  filter: invert(100%);
+  width: 20px;
+  object-position: left top;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*réglage de l'icone dans la navbar
+padding-left -> espace interne de 20px pour écarter l'image de la bordure de l'écran*/
+.menu>img{
+  padding-left: 20px;
+}
+
+/*style du bouton "partager"
+line-height->épaisseur de la ligne
+font-size->taille de police
+Text-align->aligner le texte dans le bouton
+color->couleur de texte blanc
+text-decoration->Lien sans décoration (couleur au sorvol, souligné)*/
+.btn1 {
+  line-height: 2.5;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+/*Style pour les images des réseaux en haut dans la navbar*/
+.rsx {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/*Bouton Commencer l'explo*/
+.exp {
+  line-height: 2.5;
+  color: white;
+  text-decoration: none; 
+}
+/*réglage du style pour le texte dans le bouton*/
+.exp span{
+  width: 200px;
+  display: inline-block;
+  font-family: Repo;
+  border: solid 3.5px;
+  border-radius: 5px;
+  border-right: none;
+  border-left: none;
+  vertical-align: text-bottom;
+  text-align: center;
+}
+
+/*Placer le bouton au centre*/
+.btnche{
+  display: flex;
+  justify-content: center;
+}
+
+/*Les deux chevron qui donne la forme du bouton*/
+.chevron_img{
+  filter: invert(100%);
+  position: relative;
+  width: 54px;
+  top: 6px;
+}
+
+.chevron_left{
+  left: 30px;
+}
+
+.chevron_right{
+  right: 28px;
+}
+
+/*Un essai de bouton avec chevrons en CSS, sans utiliser d'image*/
+/*.chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 1.45em;
+  top: 150px;
+  transform: rotate(-70deg);
+  vertical-align: top;
+  width: 1.45em;
+}
+
+.chevron::after {
+  border-style: solid;
+  border-width: 0 0 0.25em 0.25em;
+  content: '';
+  display: inline-block;
+  height: 1.45em;
+  top: 150px;
+  transform: rotate(-70deg);
+  vertical-align: top;
+  width: 1.45em;
+}
+
+.chevron.left:before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+.chevron.right:after {
+  left: -0.25em;
+  transform: rotate(-135deg);
+}*/
+
+/* Styles pour la deuxième partie de la page (dossier 001) */
+.part2 h2 {
+  font-size: 3em;
+}
+
+/*Couleur du texte*/
+.part2 .dossier {
+  color: skyblue;
+}
+
+/*Couleur du reste du texte*/
+.blanc {
+  color: white;
+}
+
+/* Styles pour la troisième partie de la page */
+.part3 {
+  text-align: center;
+  padding-bottom: 20rem;
+  font-family: Repo;
+}
+
+/* Styles pour les images et listes dans la troisième partie*/
+.img {
+  width: 80%;
+}
+
+/* Dossier en bleu */
+.txt {
+  color: skyblue;
+  font-family: Repo;
+}
+
+/* Style pour le titre h3 de la partie 4 avec utilisation d'une variable pour définir le padding*/
+.part4 h3 {
+  --g-padding-- : 12%;
+  text-align: center;
+  font-family: Repo;
+  font-size: 2.5rem;
+  margin-top: -10px;
+  background-color: black;
+  position: relative;
+  width: 20%;
+  margin: auto;
+  padding-left: var(--g-padding--);
+  padding-right: var(--g-padding--);
+}
+
+/*remonter le bloc*/
+.ht{
+  margin-bottom: -65px;
+}
+
+/* Alignement des images de la 4e partie (Dossier 002) */
+.part4 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-family: Repo;
+}
+
+/*Aligner le tableau*/
+.part4 li {
+    text-align: center;
+    font-family: Repo;
+}
+
+/*Diminuer la taille de l'image des coordonnés*/
+.barre1 {
+    width: 12vw;
+    height: auto;
+}
+.barre1 img{
+  width: 15vw;
+}
+/*diminuer la taille des images (planète)*/
+.part4li>img {
+   width: 25vw;
+}
+/*Définir les bordures du tableau*/
+.bord{
+  border: solid;
+  border-right: solid;
+  color: white;
+  border-width: 1px;
+  margin: 20px 80px; 
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+
+
+/* Styles pour les images dans les tableaux */
+td img {
+  width: 35px;
+  padding-left: 1.5rem;
+}
+
+/* Styles pour les texte les tableaux */
+th span {
+  margin-bottom: -10rem;
+  margin-left: 0;
+}
+
+th p {
+  padding-bottom: 2rem;
+  font-family: Repo;
+  text-align: left;
+}
+
+/* Styles pour les cellules du tableau */
+th, td {
+  border: 3px solid white;
+}
+
+/*supprimer les bordures qui gênent*/
+td {
+  border-top: none;
+}
+
+
+/* Styles pour le tableau et ses positions */
+table {
+  position: relative;
+  z-index: 1;
+  border-collapse: collapse;
+  width: 15vw;
+}
+
+hr {
+  width: 5vw;
+}
+
+
+/*mettre l'image au centre*/
+.imgf {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/*réglage pour le texte pour les parties "terrain, Surface etc"*/
+.imgf span {
+  height: 0;
+  margin: 0;
+}
+/*Pour le texte*/
+.imgf p {
+  text-align: left;
+}
+/*séparer le texte de l'image pour régler la taille*/
+.txtdiv {
+  width: 150px;
+}
+
+/*réglage pour l'alignement des 4 icones, les placer au centre, leurs taille*/
+.img1,
+.img2,
+.img3,
+.img4 {
+  float: left;
+  padding: 80px; /* Ajustez la valeur de padding selon vos besoins */
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  background-color: #000000;
+  border-width: 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: left;
+  background-size: 1.1vw;
+  background-repeat: no-repeat;
+  width: 100px;
+}
+
+/*mettre les deux icones de droiteà  droite*/
+.img3,
+.img4 {
+  float: right;
+}
+
+/* Ajout d'une classe commune pour les images */
+.img1 img,
+.img2 img,
+.img3 img,
+.img4 img {
+  max-width: 100%;
+  height: auto; /* Maintient le rapport hauteur-largeur */
+}
+
+/*Texte de surface, terrain etc*/
+h4{
+  color: white;
+  font-family: repo;
+}
+
+/*réglage du petit rond avant chaque titre H4*/
+h4>img{
+  width: 10px;
+  padding-right: 5px;
+}
+/*Texte sous le H4*/
+.imgf span{
+  text-align: left;
+}
+
+/*Chevron pour descendre qui coupe la bordure*/
+.chevrond {
+  --h-padding-- : 2%;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  margin-top: -35px;
+  background-color: black;
+  padding-left: var(--h-padding--);
+  padding-right: var(--h-padding--);
+  width: 20%;
+}
+
+/*réglage de la taille*/
+.chevrond img{
+  width: 20px;
+}
+
+/*réglage généraux de la partie 5 avec les éléments*/
+.part5{
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+/*aligment du texte et taille*/
+.part5>p,.part5>h3{
+  text-align: left;
+  padding-left: 15vw;
+}
+
+/*Disposition des images avec superposition texte et image, utilisant une variable pour définir la taille*/
+.part5 .ressources{
+  --wressource--  : 65vw;
+  background-image: url("./Ressources/Images/elements.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: var(--wressource--);
+  height: calc(var(--wressource--) * 494 / 720);
+  margin: auto;
+}
+/*taille et position du texte sur l'image*/
+.elemtxt {
+  max-width: 47%;
+  padding-left: 40px;
+}
+/*dire au texte de s'aligner sur la gauche et se superposer sur l'image*/
+.elemtxt *{
+  text-align: left;
+}
+/*définir la taille et la police du corps de texte*/
+.elemtxt p{
+  font-size: 1.7em;
+  font-family: Repo;
+}
+
+/*Tableau contenant les infos de l'élément*/
+.tr2{
+  text-align: center;
+  align-content: center;
+}
+/*Réglage de la largeur de la case centrale du tableau*/
+.td2{
+  min-width: 15vw;
+}
+
+/*réglage de l'image de l'élément d'exemple*/
+.part5 .exemple_ressource{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+/*répartition des tailles*/
+.exemple_ressource *{
+  flex: 1;
+}
+.exemple_ressource_image>img{
+  width: 100%;
+  height: auto;
+}
+/*réglages pour la position du texte à côté de l'image de l'élément*/
+.exemple_ressource_detail>*:first-child{
+  margin-bottom: 0;
+  margin-top: 10em;
+  text-align: right;
+}
+.exemple_ressource_detail>*:nth-child(2){
+  margin-top: 0;
+  font-size: 6.2em;
+}
+.exemple_ressource_detail>hr{
+  width: 90%;
+  border-color: darkgray;
+}
+.exemple_ressource_detail>table{
+  border: solid;
+  width: 100%;
+}
+
+/*mettre les barre du son au centre*/
+.son{
+  text-align: center;
+}
+
+/*image de  la zone habitable, mise à gauche*/
+.float {
+float:left;
+width: 40vw;
+height: auto;
+padding-left: 5vw;
+}
+
+.txt5{
+  text-align: left;
+  color: skyblue;
+  font-family: Repo;
+}
+
+/*texte à droite qui accompagne l'image*/
+.text-container{
+  float: right;
+  width: 20vw;
+  height: auto;
+  padding-right: 15vw;
+}
+
+.text-container h3{
+  font-size: 4em;
+}
+
+/* Agrandit l'image pour remplir la largeur de son conteneur */
+.zone {
+    width: 100%; 
+    height: auto;
+}
+
+/*nécessairep our bien aligner côte à côte l'image et le texte*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*second bouton avec chevrons*/
+.exp2 {
+  line-height: 2.5;
+  color: white;
+  text-decoration: none;
+}
+/*texte dans le bouton*/
+.exp2 span{
+  width: 180px;
+  display: inline-block;
+  font-family: Repo;
+  border: solid 3.5px;
+  border-radius: 5px;
+  border-right: none;
+  border-left: none;
+  vertical-align: text-bottom;
+  text-align: center;
+}
+
+/*les chevrons pour la bordure du bouton*/
+.chevron_img2{
+  filter: invert(100%);
+  position: relative;
+  width: 54px;
+  top: 6px;
+}
+
+.chevron_left2{
+  left: 29px;
+}
+
+.chevron_right2{
+  right: 29px;
+}
+
+
+/*centrer les chiffres*/
+.part8{
+text-align: center;
+}
+/*Mettre au centre l'ensemble des donnés*/
+.exoT {
+    display: flex;
+    justify-content: center; 
+}
+.exoT > div {
+    margin: 0 10px; 
+    text-align: center; 
+}
+/*mettre + gros les chiffres par rapport au texte*/
+.gros {
+    font-size: 5em; 
+    font-family: repo;
+    margin: 0;
+}
+
+/*centrer chevron pour remonter*/
+.chevron-up {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.chevronf {
+  display: flex;
+  justify-content: center;
+}
+.chevron-up img{
+  width: 50px;
+}
+
+/*créer le dégradé entre le footer et les chiffres*/
+.dgrd {
+  background-image: radial-gradient(#ffffffaa, #356683aa, #111d36aa, #13121500);
+}
+
+/*partie avec l'élipse blanche, retirer le dépassement (horizontal)*/
+.part9{
+/*  background-image: radial-gradient(#ffffff, #356683, #111d36, #131215);*/
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.part9>*{
+  flex: 1;
+}
+/*créationd de l'élipse et taille */
+.part9 .blanc{
+  height: 0%;
+  width: 100%;
+  background-color: white;
+  border-top: 30px solid white;
+  border-left: 585px outset transparent;
+  border-right: 585px outset transparent;
+  position: relative;
+  clear: none;
+  bottom: 0;
+  padding: 200px;
+  margin-top: 70px;
+  clip-path: ellipse(35% 70% at 75% 20%);
+  transform: rotate(180deg);
+}
+/*style du footer et centrage de son contenu*/
+.ftr{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -300px;
+}
+/*taille des images du footer*/
+.ftr img{
+  width: 90px;
+}
+
+/*remettre le fond en blanc*/
+footer span, .ftr{
+  background-color: white;
+}
+/*mettre le fond blanc et texte noir, le centrer et le grossir*/
+footer .Copyright{
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  position: relative;
+  margin-top: 100px;
+}
