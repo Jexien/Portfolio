@@ -658,6 +658,77 @@ label > span:last-child {
 
 // FIN PAGE GALERIE ____________________________________________________________________________________________________________________________________________
 
+// Page logos et identité visuelle
+
+.vdt{
+  margin-top: 10% !important;
+  margin-bottom: 5% !important;
+}
+
+.h2vdt {
+  padding-top: 3%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+
+
+.gallery-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 70%;
+  margin: 20px auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: @border-radius-small;
+  }
+
+  & > :nth-child(-n+3) {
+    align-self: start;
+  }
+
+  & > :nth-last-child(-n+3) {
+    align-self: end;
+  }
+
+  & > :nth-child(n+4):nth-last-child(n+4) {
+    align-self: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-bento {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > :nth-child(-n+2) {
+      align-self: start;
+    }
+
+    & > :nth-last-child(-n+2) {
+      align-self: end;
+    }
+
+    & > :nth-child(n+3):nth-last-child(n+3) {
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-bento {
+    grid-template-columns: 1fr;
+
+    & > * {
+      align-self: center;
+    }
+  }
+}
+
 // Footer styles
 .horizontal-bar {
   width: 100%;
