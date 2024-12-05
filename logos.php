@@ -15,6 +15,8 @@
         l'identité visuelle de cette boulangerie évoque la simplicité et l'authenticité des produits artisanaux, en harmonie avec la nature environnante.
         Les lignes épurées et les teintes douces créent une atmosphère chaleureuse, tandis que le logo symbolise un lieu où tradition et qualité se rencontrent
         pour offrir un pain qui respire la générosité de nos montagnes. Ce projet incarne ma capacité à imaginer une identité unique, qui raconte une histoire en un coup d'œil.
+        Le logo de cette boulangerie se concentre sur 2 symboles, les montagnes, et le blé. Des symboles simples et faciles à comprendre, dans une disposition qui vient entourer le nom de la boulangerie.
+        En terme de couleur, seul le jaune du blé se démarque. Le reste de la charte graphique est composée de couleurs douces, pour rappeler la simplicité et la douceur des produits de la boulangerie.
       </p>
     </div>
   </div>

@@ -2,117 +2,156 @@
 include 'header.php';
 ?>
 
-<h1 class="h1photo">Parmi les murmures de la nature, l'œil derrière l'appareil capture la danse de la lumière.</h1>
+    <h1 class="h1photo">
+        Parmi les murmures de la nature, l'œil derrière l'appareil capture la danse de la lumière.
+    </h1>
 
+    <!-- Menu de tri par catégories -->
+    <div class="container py-3">
+        <select id="categoryFilter" class="form-select" aria-label="Filtrer par catégorie">
+            <option value="all">Toutes les catégories</option>
+            <option value="astrophoto">Astrophoto</option>
+            <option value="paysage">Paysage</option>
+            <option value="nature">Nature</option>
+            <option value="urbain">Urbain</option>
+            <option value="portrait">Portrait</option>
+            <option value="vehicule">Véhicule</option>
+            <option value="macro">Macro</option>
+            <option value="urbex">Urbex</option>
+            <option value="autre">Autre</option>
+        </select>
+    </div>
 
-<div class="container py-5">
-<div class="gallery-row row rowgallerie">
-    <!-- 12 images pour la galerie -->
-    <div class="gallery-item">
-        <img src="img/Photo/orage.jpg" class="img-fluid rounded" alt="Photo 1">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/pissenlit.jpg" class="img-fluid rounded" alt="Pissenlit">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/couchesoleil.jpg" class="img-fluid rounded" alt="Couché de soleil">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/chapelle.jpg" class="img-fluid rounded" alt="Chapelle">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/graine_pissenlit.jpg" class="img-fluid rounded" alt="Graine de pissenlit">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/lune.jpg" class="img-fluid rounded" alt="Lune">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/orgere.jpg" class="img-fluid rounded" alt="Orgère">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/mesange.jpg" class="img-fluid rounded" alt="Mésange">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/chat.jpg" class="img-fluid rounded" alt="Chat">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/tikky.jpg" class="img-fluid rounded" alt="Tikky">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/marmotte.jpg" class="img-fluid rounded" alt="Marmotte">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/fleur.jpg" class="img-fluid rounded" alt="Fleur">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/grenoble.jpg" class="img-fluid rounded" alt="Grenoble">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/turin.jpg" class="img-fluid rounded" alt="Turin">
-    </div>
-    <div class="gallery-item">
-        <img src="img/Photo/bilbao.jpg" class="img-fluid rounded" alt="Bilbao">
-    </div>
-</div>
+    <div class="container py-5">
+        <div class="gallery-row row rowgallerie" id="gallery">
+            <!-- Les images seront ajoutées dynamiquement -->
+        </div>
 
-<!-- Bouton pour retourner à l'accueil -->
-<div class="row justify-content-left rowgallerie">
-    <a href="index.php" class="btn btn-secondary ">
-        Retour
-    </a>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="photoModalLabel">Photo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Animation de chargement -->
+        <div id="loading" class="text-center my-3" style="display: none;">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Chargement...</span>
             </div>
-            <div class="modal-body">
-                <img id="modalImage" src="" class="img-fluid" alt="">
-                <p id="modalImageAlt"></p>
+        </div>
+
+        <!-- Bouton pour retourner à l'accueil -->
+        <div class="row justify-content-left rowgallerie">
+            <a href="index.php" class="btn btn-secondary">
+                Retour
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal pour afficher une image en plein écran -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">Photo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="">
+                    <p id="modalImageAlt"></p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bouton pour retourner en haut de la page -->
-<a href="#" id="backToTopBtn" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; display: none;">
-    Retour en haut
-</a>
+    <!-- Bouton pour retourner en haut de la page -->
+    <a href="#" id="backToTopBtn" style="position: fixed; bottom: 20px; right: 20px; display: none;">
+        Retour en haut
+    </a>
 
-<script>
-    // Afficher le bouton lorsque l'utilisateur fait défiler vers le bas
-    window.onscroll = function() {
-        var backToTopBtn = document.getElementById('backToTopBtn');
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
+    <script>
+        const images = [
+            { src: 'img/Photo/orage.jpg', alt: 'Orage', category: 'nature' },
+            { src: 'img/Photo/pissenlit.jpg', alt: 'Pissenlit', category: 'nature' },
+            { src: 'img/Photo/couchesoleil.jpg', alt: 'Couché de soleil', category: 'paysage' },
+            { src: 'img/Photo/chapelle.jpg', alt: 'Chapelle', category: 'urbain' },
+            { src: 'img/Photo/graine_pissenlit.jpg', alt: 'Graine de pissenlit', category: 'macro' },
+            { src: 'img/Photo/lune.jpg', alt: 'Lune', category: 'astrophoto' },
+            { src: 'img/Photo/orgere.jpg', alt: 'Orgère', category: 'paysage' },
+            { src: 'img/Photo/mesange.jpg', alt: 'Mésange', category: 'nature' },
+            { src: 'img/Photo/chat.jpg', alt: 'Chat', category: 'portrait' },
+            { src: 'img/Photo/tikky.jpg', alt: 'Tikky', category: 'portrait' },
+            { src: 'img/Photo/marmotte.jpg', alt: 'Marmotte', category: 'nature' },
+            { src: 'img/Photo/fleur.jpg', alt: 'Fleur', category: 'macro' },
+            { src: 'img/Photo/grenoble.jpg', alt: 'Grenoble', category: 'urbain' },
+            { src: 'img/Photo/turin.jpg', alt: 'Turin', category: 'urbain' },
+            { src: 'img/Photo/bilbao.jpg', alt: 'Bilbao', category: 'urbain' },
+        ];
+
+        let loadedImages = 0;
+        const imagesPerLoad = 6;
+        const gallery = document.getElementById('gallery');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const loadingSpinner = document.getElementById('loading');
+        const preloadedImages = new Set();
+
+        function preloadImage(src) {
+            if (!preloadedImages.has(src)) {
+                const img = new Image();
+                img.src = src;
+                preloadedImages.add(src);
+            }
         }
-    };
-</script>
 
-<!-- Script pour afficher l'image dans la modal -->
-<script>
-    document.querySelectorAll('.gallery-item img').forEach(img => {
-        img.addEventListener('click', function() {
-            document.getElementById('modalImage').src = this.src;
-            document.getElementById('modalImageAlt').innerText = this.alt; // Affichage du contenu de l'attribut alt
-            var photoModal = new bootstrap.Modal(document.getElementById('photoModal'));
-            photoModal.show();
-        });
-    });
-</script>
+        function loadImages() {
+            const fragment = document.createDocumentFragment();
+            for (let i = loadedImages; i < loadedImages + imagesPerLoad && i < images.length; i++) {
+                const image = images[i];
+                preloadImage(image.src);
+                const div = document.createElement('div');
+                div.classList.add('gallery-item', 'col-md-4');
+                div.dataset.category = image.category;
+                div.innerHTML = `<img src="${image.src}" alt="${image.alt}" class="img-fluid rounded fade-in">`;
+                fragment.appendChild(div);
+            }
+            gallery.appendChild(fragment);
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach(img => img.classList.add('loaded'));
+            }, 100);
 
+            loadedImages += imagesPerLoad;
+        }
+
+        function filterImages(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function handleInfiniteScroll() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                if (loadedImages < images.length) {
+                    loadingSpinner.style.display = 'block';
+                    setTimeout(() => {
+                        loadImages();
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }
+        }
+
+        loadImages();
+
+        categoryFilter.addEventListener('change', (e) => filterImages(e.target.value));
+        window.addEventListener('scroll', handleInfiniteScroll);
+        window.onscroll = function () {
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            backToTopBtn.style.display = document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? "block" : "none";
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <?php
 include 'footer.php';
 ?>
-
-<!-- PLOP TEST COMMIT 2 -->

@@ -2,21 +2,45 @@
 include 'header.php';
 ?>
 
-<div class="iframe-container">
-  <div class="item">
-    <iframe class="iframe-figma" src="https://embed.figma.com/proto/0RzUgQ1fkgDgVjvZHfz12P/3D?page-id=0%3A1&node-id=97-323&embed-host=share" allowfullscreen></iframe>
-    <p class="maquette">Maquette de proposition pour un nouveau site web pour l'entreprise ACS</p>
-  </div>
 
-  <div class="item">
-  <iframe class="iframe-figma" src="https://embed.figma.com/design/xiebEHTqhKmucrjW3ubrTg/CMS---MAQUETTE?node-id=1-2&embed-host=share" allowfullscreen></iframe>
-    <p class="maquette">Wireframe réalisée en quelques heures servant de base pour un site web construit en CMS (Wordpress), à l'aide d'un sous-thème perso, d'HTML, de CSS et de PHP</p>
-    <p class="maquette"><a href="https://pulse.fabien-maillard.mds-grenoble.yt/index.php/index/" target="_blank">Ce site est visible à partir du lien suivant ce lien</a>.</p>
+    <a href="https://embed.figma.com/proto/0RzUgQ1fkgDgVjvZHfz12P/3D?page-id=0%3A1&node-id=97-323&embed-host=share" target="_blank">
+    <div class="vdt container my-4">
+  <div class="row align-items-center">
+    <!-- Image à gauche -->
+    <div class="col-md-4">
+      <img src="img/ACSmockup.png" alt="Mockup maquette ACS" class="img-fluid rounded shadow">
+    </div>
+    <!-- Texte à droite -->
+    <div class="col-md-8">
+      <h2 class="project-title">Projet vedette : Maquette ACS (Stage 2024)</h2>
+      <p class="project-description">
+       Durant mon stage en entreprise, lors de l'été 2024, mon tuteur m'a demandé de designer une maquette pour la page d'acceuil du site web de l'entreprise. J'ai alors réalisé 3 maquettes dans un style totalement différent les uns des autres. 
+       Je vous présente aujourd'hui le prototype sur lequel j'ai pris le plus de liberté et le plus de plaisir à réaliser. 
+       J'ai choisi de reprendre la couleur bleu de l'entreprise, représentant à la fois la stabilité et la confiance, mais le bleu est aussi une couleur associée à la technologie. Cette page d'acceuil devait retransmettre le nouveau virage d'ACS dans l'informatique, via notamment le développement de son pôle informatique.
+       Pour présenter brièvement l'entreprise, j'ai pris le pari de redessiner les locaux de l'entreprise dans un style 3D, et de lier à ça un effet de hover qui vient faire apparaitre, en surbrillance, les différents pôles et leurs activitées.
+       Vous pouvez découvrir la maquette complète en cliquant sur l'image ou ce texte.
+      </p>
+    </div>
   </div>
+</div>
 
-  <div class="item">
-  <iframe class="iframe-figma" src="https://embed.figma.com/design/bGiEzGBmzqFnYcDNPl1EAq/Boulangerie-2?node-id=362-724&embed-host=share" allowfullscreen></iframe>
-    <p class="maquette">Maquette du site internet de la boulangerie "Le pain de Mayou" située à Saint jean de chevelu. Actuellement le site web est en cours de développement par une agence</p>
+<a href="https://embed.figma.com/design/bGiEzGBmzqFnYcDNPl1EAq/Boulangerie-2?node-id=362-724&embed-host=share" target="_blank">
+  <div class="vdt container my-4">
+  <div class="row align-items-center">
+    <!-- Texte à gauche -->
+    <div class="col-md-8">
+      <h2 class="project-title">Maquette de la boulangerie 'Le pain de mayou'</h2>
+      <p class="project-description">
+       Le gros projet de mon stage de 2024, j'avais pour mission de réaliser la maquette entière pour le site 'Le pain de mayou', une boulangerie située à Saint jean de chevelu. 
+       Ce travail comprend la réalisation de l'arborescence du site, la réalisation de la maquette complète, l'écriture des textes. Ma principale contrainte était de reprendre la charte graphique de la boulangerie : Logo, couleurs et typographie.
+       Ce projet, réalisé sur 6 semaines m'a permis de mettre en pratique mes compétences sur un projet complet, avec une échéance à plus long terme que les devoirs de cours. J'ai pu prendre le temps de réfléchir à la meilleure manière de présenter la boulangerie, et de mettre en avant ses valeurs. 
+       J'ai pu prendre le temps de me tromper, et de réaliser par moi même les corrections nécessaires, de peaufiner le design et plonger dans les détails.
+      </p>
+    </div>
+    <!-- Image à droite -->
+    <div class="col-md-4">
+      <img src="img/pdmmockup.png" alt="Logo Fournil des Alpes" class="img-fluid rounded shadow">
+    </div>
   </div>
 </div>
 
