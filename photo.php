@@ -42,7 +42,7 @@ include 'header.php';
         </div>
     </div>
 
-    <!-- Modal pour afficher une image en plein écran -->
+    <!-- Modal pour afficher une image en plein écran avec son nom -->
     <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
@@ -50,9 +50,9 @@ include 'header.php';
                     <h5 class="modal-title" id="photoModalLabel">Photo</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body text-center">
                     <img id="modalImage" src="" class="img-fluid" alt="">
-                    <p id="modalImageAlt"></p>
+                    <p id="modalImageAlt" class="mt-3"></p>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@ include 'header.php';
                 const div = document.createElement('div');
                 div.classList.add('gallery-item', 'col-md-4');
                 div.dataset.category = image.category;
-                div.innerHTML = `<img src="${image.src}" alt="${image.alt}" class="img-fluid rounded fade-in">`;
+                div.innerHTML = `<img src="${image.src}" alt="${image.alt}" class="img-fluid rounded fade-in" data-bs-toggle="modal" data-bs-target="#photoModal">`;
                 fragment.appendChild(div);
             }
             gallery.appendChild(fragment);
@@ -140,7 +140,22 @@ include 'header.php';
             }
         }
 
+        function setupModal() {
+            const modalImage = document.getElementById('modalImage');
+            const modalImageAlt = document.getElementById('modalImageAlt');
+
+            gallery.addEventListener('click', (e) => {
+                if (e.target.tagName === 'IMG') {
+                    const img = e.target;
+                    modalImage.src = img.src;
+                    modalImage.alt = img.alt;
+                    modalImageAlt.textContent = img.alt; // Affiche le texte de l'attribut alt
+                }
+            });
+        }
+
         loadImages();
+        setupModal();
 
         categoryFilter.addEventListener('change', (e) => filterImages(e.target.value));
         window.addEventListener('scroll', handleInfiniteScroll);
