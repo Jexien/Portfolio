@@ -1,5 +1,11 @@
 <?php include 'header.php'; ?>
 
+<!-- Bandeau de téléchargement PDF -->
+<div class="download bg-primary text-white py-3 text-center">
+    <p class="m-0">Dossier de Rebranding de la marque Fujifilm disponible en PDF :</p>
+    <a href="./dossier/fuji.pdf" class="btn btn-light mt-2" download> Télécharger le dossier PDF</a>
+    <a href="other_projects.php" class="btn btn-success mt-2">Voir mes autres dossiers</a>
+</div>
 
 <div class="vdt container my-4">
   <div class="row align-items-center">
@@ -21,6 +27,7 @@
     </div>
   </div>
 </div>
+
 <div class="gallery-bento">
     <figure>
         <img src="img/Deventure.jpg" alt="Deventure">
@@ -31,19 +38,19 @@
         <figcaption>Annonce d'ouverture</figcaption>
     </figure>
     <figure>
-        <img src="img/pain.png" alt="Pain" style="background-color: white;">
+        <img src="img/pain.png" alt="Pain" style="background-color: white;" class="icon">
         <figcaption>Pain artisanal</figcaption>
     </figure>
     <figure>
-        <img src="img/cbok.png" alt="Cbok" style="background-color: white;">
+        <img src="img/cbok.png" alt="Cbok" style="background-color: white;" class="icon">
         <figcaption>Carte de visite</figcaption>
     </figure>
     <figure>
-        <img src="img/croissant.png" alt="Croissant" style="background-color: white;">
+        <img src="img/croissant.png" alt="Croissant" style="background-color: white;" class="icon">
         <figcaption>Croissant frais</figcaption>
     </figure>
     <figure>
-        <img src="img/naturel.png" alt="Naturel" style="background-color: white;">
+        <img src="img/naturel.png" alt="Naturel" style="background-color: white;" class="icon">
         <figcaption>Produits naturels</figcaption>
     </figure>
 </div>
@@ -51,18 +58,18 @@
 <div id="projectCarousel" class="carousel slide my-4" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <a href="cafein.php">
-                <img src="img/café-03-02.png" class="d-block w-100" alt="Café'in">
+            <a href="tresor.php">
+                <img src="img/trésorepices.png" class="d-block w-100" alt="Trésor d'épices">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Café'in</h5>
+                    <h5>Trésor d'épices</h5>
                 </div>
             </a>
         </div>
         <div class="carousel-item">
-            <a href="tresor.php">
-                <img src="img/trésor d'épices.png" class="d-block w-100" alt="Trésor d'épices">
+            <a href="cafein.php">
+                <img src="img/café-03-02.png" class="d-block w-100" alt="Café'in">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Trésor d'épices</h5>
+                    <h5>Café'in</h5>
                 </div>
             </a>
         </div>
@@ -77,8 +84,5 @@
         <span class="sr-only">Suivant</span>
     </a>
 </div>
-
-
-
 
 <?php include 'footer.php'; ?>

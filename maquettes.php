@@ -39,7 +39,7 @@ include 'header.php';
     </div>
     <!-- Image à droite -->
     <div class="col-md-4">
-      <img src="img/pdmmockup.png" alt="Logo Fournil des Alpes" class="img-fluid rounded shadow">
+      <img src="img/pdmmockup.png" alt="Pain de Mayou Mockup" class="img-fluid rounded shadow">
     </div>
   </div>
 </div>
